@@ -1,0 +1,23 @@
+@import '../colors';
+
+.ant-carousel .slick-slider {
+    .slick-dots {
+    @apply gap-4;
+    margin-bottom: 20px;
+        li button {
+            width: 6px;
+            height: 6px;
+            padding: 6px;
+            border-radius: 50%;
+        }
+        li.slick-active {
+            width: 16px;
+            button {
+                width: 7px;
+                height: 7px;
+                border-radius: 100%;
+                background: $color-white;
+              }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.roxanatech-demo-item {
+    &__container {
+        .roxanatech-demo-item__thumb {
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(28, 0, 59, 0);
+                left: 0;
+                top: 0;
+                transition: all 0.4s ease-in;
+            }
+            .roxanatech-demo-item {
+                &__fancyboy {
+
+                }
+                &__button {
+                    background: white;
+                    cursor: pointer;
+                    border: 0;
+                    border-radius: 50px;
+                    color: #0d1741;
+                    overflow: hidden;
+                    position: absolute;
+                    font-size: 16px;
+                    font-weight: 500;
+                    z-index: 9;
+                    opacity: 0;
+                    height: 50px;
+                    line-height: 50px;
+                    padding: 0 40px;
+                    box-shadow: none;
+                    transition: all 0.5s ease;
+                    transform: perspective(1px) translateZ(0);
+                    & {
+                        @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        transform: scaleX(0);
+                        transform-origin: 0 50%;
+                        transition-duration: 0.4s;
+                        & {
+                            @apply bg-gradient-to-r from-primary to-green-700
+                        }
+                    }
+                    &:hover {
+                        color: white;
+                        &::before {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

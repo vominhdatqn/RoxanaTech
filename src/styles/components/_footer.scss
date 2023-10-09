@@ -1,0 +1,11 @@
+.footer {
+    @apply z-20 bg-white px-6 pt-16 w-full
+}
+
+.link {
+    @apply text-blue-600 hover:text-blue-700 hover:underline font-medium transition-colors duration-300 cursor-pointer;
+    &:focus {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+    }
+}
