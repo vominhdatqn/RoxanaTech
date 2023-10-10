@@ -16,7 +16,7 @@ import {
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-3">
         <div className="space-y-2 flex flex-col sm:col-span-1">
           <p className="text-lg md:text-base font-bold tracking-wide text-gray-900">
             Danh mục
@@ -32,54 +32,52 @@ export default function Footer() {
           <Link
             aria-label="Dịch vụ"
             rel="noopener noreferrer"
-            href={"/bang-gia"}
+            href={"#"}
+            className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
+          >
+            Demos
+          </Link>
+          <Link
+            aria-label="Váy cưới"
+            rel="noopener noreferrer"
+            href={"#"}
             className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
           >
             Dịch vụ
           </Link>
           <Link
-            aria-label="Váy cưới"
-            rel="noopener noreferrer"
-            href={"/vay-cuoi"}
-            className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
-          >
-            Váy cưới
-          </Link>
-          <Link
             aria-label="Stories & Tips"
             rel="noopener noreferrer"
-            href={"/bai-viet"}
+            href={"#"}
             className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
           >
-            Stories & Tips
+            Bảng giá
           </Link>
         </div>
-        <div className="space-y-2 text-sm">
-          <p className="text-lg md:text-base font-bold tracking-wide text-gray-900">
-            Liên hệ
-          </p>
+        <div className="space-y-2">
+          <p className="text-lg md:text-lg font-bold tracking-wide">Liên hệ</p>
           <div className="flex">
             <p className="mr-1 text-lg md:text-base text-gray-800">Phone:</p>
             <Link
-              href="tel:070 619 0865"
-              aria-label="070 619 0865"
-              title="070 619 0865"
+              href="tel:0916 254 200"
+              aria-label="0916 254 200"
+              title="0916 254 200"
               rel="nofollow noreferrer"
               className="link text-lg md:text-base"
             >
-              070 619 0865
+              0916 254 200
             </Link>
           </div>
           <div className="flex">
             <p className="mr-1 text-lg md:text-base text-gray-800">Email:</p>
             <Link
-              href="mailto:mardollstudio2022@gmail.com"
-              aria-label="mardollstudio2022@gmail.com"
-              title="mardollstudio2022@gmail.com"
+              href="mailto:roxanatechcompany@gmail.com"
+              aria-label="roxanatechcompany@gmail.com"
+              title="roxanatechcompany@gmail.com"
               rel="nofollow noreferrer"
               className="link text-lg md:text-base"
             >
-              mardollstudio2022@gmail.com
+              roxanatechcompany@gmail.com
             </Link>
           </div>
           <div className="flex">
@@ -88,15 +86,15 @@ export default function Footer() {
               href="https://www.google.com/maps"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="49 Tu Mo, Quy Nhon, Vietnam"
-              title="49 Tu Mo, Quy Nhon, Vietnam"
+              aria-label="292/6A Xô Viết Nghệ Tĩnh, Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh"
+              title="292/6A Xô Viết Nghệ Tĩnh, Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh"
               className="link text-lg md:text-base"
             >
-              49 Tu Mo, Quy Nhon, Vietnam
+              292/6A Xô Viết Nghệ Tĩnh, P25, Bình Thạnh, TP.Hồ Chí Minh
             </Link>
           </div>
         </div>
-        <div>
+        {/* <div>
           <span className="text-lg md:text-base font-bold tracking-wide text-gray-900">
             Social
           </span>
@@ -126,7 +124,7 @@ export default function Footer() {
               <BiLogoTiktok size={20} />
             </Link>
           </div>
-        </div>
+        </div> */}
         <div>
           <span className="text-lg md:text-base font-bold tracking-wide text-gray-900">
             Fanpage
@@ -134,9 +132,9 @@ export default function Footer() {
           <div className="facebook-fanpage mt-4">
             <iframe
               aria-label="Facebook fanpage"
-              src={`https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMardollStudio&tabs=timeline&width=440&height=440&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=626080131062806`}
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100080538728930&tabs=timeline&width=440&height=460&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=626080131062806"
               width="440"
-              height="440"
+              height="460"
               className="border-none overflow-hidden"
               scrolling="no"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
@@ -146,7 +144,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
         <p className="text-sm text-gray-600">
-          © Copyright 2023 Mardoll Studio Inc. All rights reserved.
+          © Copyright 2023 RoxanaTech Inc. All rights reserved.
         </p>
         <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           <li>

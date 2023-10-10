@@ -1,24 +1,8 @@
 "use client";
-import React from "react";
-import { SiZalo } from "react-icons/si";
-import {
-  BiSolidMessageRoundedDots,
-  BiPhoneCall,
-  BiArrowFromBottom,
-} from "react-icons/bi";
-import clsx from "clsx";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
-// import FacebookMessenger from "../FacebookMessenger";
-import dynamic from "next/dynamic";
 import { Button } from "antd";
-
-const FacebookMessenger = dynamic(
-  () => import("@/components/FacebookMessenger"),
-  {
-    // loading: () => <p>Loading...</p>,
-    ssr: false,
-  }
-);
+import Link from "next/link";
+import { BiArrowFromBottom, BiPhoneCall } from "react-icons/bi";
 
 export default function FloatButton() {
   const { isVisible, scrollToTop } = useScrollToTop();
@@ -26,9 +10,9 @@ export default function FloatButton() {
     <>
       <div className="fixed z-50 bottom-[220px] right-8 bg-white rounded overflow-hidden shadow-xl">
         <ul className="divide-y divide-gray-300">
-          <li className="hover:bg-[#0080F7] p-1">
+          {/* <li className="hover:bg-[#0080F7] p-1">
             <SiZalo size={30} className="text-primary hover:text-white" />
-          </li>
+          </li> */}
           {/* <li className="hover:bg-[#0080F7] p-1">
             <BiSolidMessageRoundedDots
               size={30}
@@ -36,14 +20,21 @@ export default function FloatButton() {
             />
           </li> */}
           <li className="hover:bg-[#2CBB00] p-1">
-            <BiPhoneCall
-              size={30}
-              className="text-[#2CBB00] hover:text-white"
-            />
+            <Link
+              href="tel:0916 254 200"
+              aria-label="0916 254 200"
+              title="0916 254 200"
+              rel="nofollow noreferrer"
+            >
+              <BiPhoneCall
+                size={30}
+                className="text-[#2CBB00] hover:text-white"
+              />
+            </Link>
           </li>
         </ul>
       </div>
-      <FacebookMessenger />
+      {/* <FacebookMessenger /> */}
       <div className="fixed bottom-[170px] right-9 z-50">
         {isVisible ? (
           <Button

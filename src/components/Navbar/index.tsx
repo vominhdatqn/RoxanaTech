@@ -33,7 +33,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center text-base justify-center ml-16">
             <Link
               className="underline-hover mr-5 uppercase"
-              href="/ve-chung-toi"
+              href="/"
               aria-label="Về chúng tôi"
               rel="noopener noreferrer"
             >
@@ -41,18 +41,20 @@ export default function Navbar() {
             </Link>
             <Link
               className="hoverable mr-5"
-              href="/vay-cuoi"
+              // href="/vay-cuoi"
+              href="#"
               aria-label="Dịch vụ"
               rel="noopener noreferrer"
             >
               <span className="underline-hover uppercase">Demos</span>
-              <div className="mega-menu">
+              {/* <div className="mega-menu">
                 <MegaMenuService />
-              </div>
+              </div> */}
             </Link>
             <Link
               className="underline-hover mr-5 uppercase"
-              href="/vay-cuoi"
+              // href="/vay-cuoi"
+              href="#"
               aria-label="Váy cưới"
               rel="noopener noreferrer"
             >
@@ -60,7 +62,8 @@ export default function Navbar() {
             </Link>
             <Link
               className="underline-hover mr-5 uppercase"
-              href="/bai-viet"
+              // href="/bai-viet"
+              href="#"
               aria-label="Stories & Tips"
               rel="noopener noreferrer"
             >

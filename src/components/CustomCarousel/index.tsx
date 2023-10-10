@@ -24,14 +24,14 @@ export default function CustomCarousel({
       <Carousel autoplay ref={carouselRef} {...others}>
         {children}
       </Carousel>
-      <div className="absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
         <Button
           onClick={handlePrevPage}
           shape="circle"
           icon={<LeftOutlined size={32} color={colors.primary} />}
         ></Button>
       </div>
-      <div className="absolute -right-[16px] top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
         <Button
           onClick={handleNextPage}
           shape="circle"

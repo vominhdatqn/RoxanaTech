@@ -1,5 +1,7 @@
 import { BiSolidCameraPlus, BiSolidHome, BiSolidContact } from "react-icons/bi";
 import { GiAmpleDress } from "react-icons/gi";
+import { RiPriceTag2Fill } from "react-icons/ri";
+import { MdMiscellaneousServices, MdContactPage } from "react-icons/md";
 import TabBarItem from "./TabBarItem";
 
 export default function TabBar() {
@@ -18,9 +20,9 @@ export default function TabBar() {
     },
     {
       name: "Bảng giá",
-      url: "bang-gia",
+      url: "#",
       icon: (
-        <BiSolidCameraPlus
+        <RiPriceTag2Fill
           size={24}
           className="mb-1 text-gray-500 group-hover:text-primary"
         />
@@ -29,9 +31,9 @@ export default function TabBar() {
     },
     {
       name: "Dịch vụ",
-      url: "chup-album-cuoi",
+      url: "#",
       icon: (
-        <GiAmpleDress
+        <MdMiscellaneousServices
           size={24}
           className="mb-1 text-gray-500 group-hover:text-primary"
         />
@@ -42,7 +44,7 @@ export default function TabBar() {
       name: "Liên hệ",
       url: "lien-he",
       icon: (
-        <BiSolidContact
+        <MdContactPage
           size={24}
           className="mb-1 text-gray-500 group-hover:text-primary"
         />

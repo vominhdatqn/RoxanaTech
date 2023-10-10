@@ -24,10 +24,14 @@ export default function LogoList() {
     },
   ];
   return (
-    <div className="flex justify-between mr-[-15px] ml-[-15px] my-0 md:-mx-2.5 md:my-0">
+    <div className="flex justify-between py-2 mr-[-15px] ml-[-15px] my-0 md:-mx-2.5 md:my-0">
       {partnerLogos.map((partnerLogo, index) => (
-        <div className="p-[15px]" key={index}>
-          <img src={partnerLogo.src} alt={partnerLogo.alt} />
+        <div key={index}>
+          <img
+            src={partnerLogo.src}
+            alt={partnerLogo.alt}
+            className="h-[60px] object-cover"
+          />
         </div>
       ))}
     </div>
