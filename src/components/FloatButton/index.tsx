@@ -20,7 +20,7 @@ export default function FloatButton() {
             />
           </li> */}
           <li className="hover:bg-[#2CBB00] p-1">
-            <Link
+            <a
               href="tel:0916 254 200"
               aria-label="0916 254 200"
               title="0916 254 200"
@@ -30,7 +30,7 @@ export default function FloatButton() {
                 size={30}
                 className="text-[#2CBB00] hover:text-white"
               />
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

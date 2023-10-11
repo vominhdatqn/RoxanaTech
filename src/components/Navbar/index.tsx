@@ -1,20 +1,43 @@
 "use client";
-
+import React from "react";
 import { Button, Space } from "antd";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import MegaMenuService from "../MegaMenu/Service";
 import OrderTime, { OrderTimeRef } from "../Modal/OrderTime";
 import DrawerMenu from "./DrawerMenu";
 import { useRef } from "react";
 import dynamic from "next/dynamic";
-import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { useScrollActiveShadow } from "@/hooks/useScrollActiveShadow";
 import { cn } from "@/lib/cs";
+import ColorButton from "../ColorButton";
+import colors from "../../styles/colors";
 
 // const StickyBanner = dynamic(() => import("@/components/StickyBanner"));
 export default function Navbar() {
+  const pathname = usePathname();
+  const router = useRouter();
   const { isVisible } = useScrollActiveShadow();
+
+  const handleScrollToView = (elementId: string) => () => {
+    const element = document.getElementById(elementId);
+    if (pathname === "/" && element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      return element.scrollIntoView({ behavior: "smooth" });
+    }
+    router.push("/");
+    setTimeout(() => {
+      const element = document.getElementById(elementId);
+      console.log("element", element);
+      return element?.scrollIntoView({ behavior: "smooth" });
+    }, 1000);
+    // navigate()
+    //   .then()
+    //   .finally(() => {
+    //     () => router.push("/")
+    //   });
+  };
   return (
     <div className="sticky w-full top-0 z-50">
       {/* <StickyBanner /> */}
@@ -39,28 +62,39 @@ export default function Navbar() {
             >
               Trang chủ
             </Link>
-            <Link
+            {/* <Link
               className="hoverable mr-5"
               // href="/vay-cuoi"
               href="#"
               aria-label="Dịch vụ"
               rel="noopener noreferrer"
+            > */}
+            <span
+              aria-label="Demos"
+              onClick={handleScrollToView("roxanatech-demos")}
+              className="underline-hover mr-5 uppercase cursor-pointer"
             >
-              <span className="underline-hover uppercase">Demos</span>
-              {/* <div className="mega-menu">
+              Demos
+            </span>
+            {/* <div className="mega-menu">
                 <MegaMenuService />
               </div> */}
-            </Link>
-            <Link
-              className="underline-hover mr-5 uppercase"
-              // href="/vay-cuoi"
-              href="#"
-              aria-label="Váy cưới"
-              rel="noopener noreferrer"
+            {/* </Link> */}
+            <span
+              aria-label="Dịch vụ"
+              onClick={handleScrollToView("roxanatech-services")}
+              className="underline-hover mr-5 uppercase cursor-pointer"
             >
               Dịch vụ
-            </Link>
-            <Link
+            </span>
+            <span
+              aria-label="Bảng giá"
+              onClick={handleScrollToView("roxanatech-pricing-plan")}
+              className="underline-hover mr-5 uppercase cursor-pointer"
+            >
+              Bảng giá
+            </span>
+            {/* <Link
               className="underline-hover mr-5 uppercase"
               // href="/bai-viet"
               href="#"
@@ -68,7 +102,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
             >
               Bảng giá
-            </Link>
+            </Link> */}
             <Link
               className="underline-hover mr-5 uppercase"
               href="/lien-he"
@@ -83,8 +117,9 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <Button
             aria-label="Khám phá"
-            type="primary"
+            type="text"
             shape="round"
+            className="!bg-gradient-to-r from-primary to-green-700"
             size="large"
           >
             Khám phá
@@ -94,8 +129,9 @@ export default function Navbar() {
         <div className="flex md:hidden gap-3">
           <Button
             aria-label="Khám phá"
-            type="primary"
+            type="text"
             shape="round"
+            className="!bg-gradient-to-r from-primary to-green-700"
             size="large"
           >
             Khám phá

@@ -6,7 +6,6 @@ import TabBarItem from "./TabBarItem";
 
 export default function TabBar() {
   const menus = [
-    // { name: 'Mardoll', icon: <BiSolidHome size={24} className="mb-1 text-gray-500 group-hover:text-primary" />, tooltip: false },
     {
       name: "Trang chủ",
       url: "/",
@@ -20,7 +19,7 @@ export default function TabBar() {
     },
     {
       name: "Bảng giá",
-      url: "#",
+      url: "",
       icon: (
         <RiPriceTag2Fill
           size={24}

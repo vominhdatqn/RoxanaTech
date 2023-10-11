@@ -20,7 +20,7 @@ const config: Config = {
       fontFamily: {
         // 'dmserif': ['DM Serif', 'serif'],
         // 'com': ['Comfortaa', 'cursive'],
-        // 'arsenal': ['Arsenal', 'sans-serif'],
+        'arsenal': ['Arsenal', 'sans-serif'],
         // 'arvo': ['Arvo', 'sans-serif'],
         // 'onest': ['Arsenal', 'Arvo', 'Onest'],
         'jakarta': ['Plus Jakarta Sans', 'sans-serif']

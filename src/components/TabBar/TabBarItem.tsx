@@ -32,7 +32,7 @@ export default function TabBarItem({
     <button
       type="button"
       onClick={handleGoToPage}
-      className="relative inline-flex flex-col items-center justify-center font-medium px-5 hover:bg-gray-50 group"
+      className="relative inline-flex flex-col items-center justify-center font-medium px-3 hover:bg-gray-50 group"
     >
       {/* {tooltip && (
         <>

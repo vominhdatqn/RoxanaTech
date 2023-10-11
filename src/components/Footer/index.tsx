@@ -55,7 +55,9 @@ export default function Footer() {
           </Link>
         </div>
         <div className="space-y-2">
-          <p className="text-lg md:text-lg font-bold tracking-wide">Liên hệ</p>
+          <p className="text-lg md:text-base font-bold tracking-wide">
+            Liên hệ
+          </p>
           <div className="flex">
             <p className="mr-1 text-lg md:text-base text-gray-800">Phone:</p>
             <Link

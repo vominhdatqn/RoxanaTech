@@ -1,7 +1,8 @@
 .roxanatech-featured-products {
   // padding-top: 90px;
   &__container {
-    @apply w-full mx-auto px-4 md:max-w-[720px] lg:max-w-[960px];
+    @apply w-full mx-auto px-4;
+    // @apply w-full mx-auto px-4 md:max-w-[720px] lg:max-w-[960px];
     .roxanatech-featured-products__content {
       // & {
       //     @apply flex-[0_0_41.666667%] max-w-[41.666667%];

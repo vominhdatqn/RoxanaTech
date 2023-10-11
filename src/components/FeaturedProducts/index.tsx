@@ -1,47 +1,59 @@
+import React from "react";
+
 import FeaturedProductCard from "../FeaturedProductCard";
 
 const items = [
   {
     title: "Thiết kế web",
     icon: "/assets/icons/featured/website-icon-128x128.png",
-    description: "Thiết kế website chuyên nghiệp cho công ty, doanh nghiệp thương mại điện tử, vận tải, hoặc đơn vị cần quản trị kinh doanh dựa trên nền tảng ứng dụng web. Mọi sản phẩm đều được thiết kế web chuẩn SEO và tư vấn thiết kế web trọn gói.",
+    description:
+      "Thiết kế website chuyên nghiệp cho công ty, doanh nghiệp, cửa hàng hoặc đơn vị cần quản trị kinh doanh dựa trên nền tảng ứng dụng web. Mọi sản phẩm đều được thiết kế web chuẩn SEO, code tay dùng công nghệ ReactJS, NextJs và tư vấn thiết kế web trọn gói. Khách hàng không phải lo về độ mượt của web, giao diện đẹp có thể tuỳ biến.",
   },
   {
     title: "Thiết kế App",
     icon: "/assets/icons/featured/mobile-app-icon-128x128.png",
-    description: 'Thiết kế App cho Smartphone bằng công nghệ React Native + Expo đáp ứng mọi tiêu chuẩn của Apple iOS và Google Android. Đảm bảo App luôn chạy tốt đa nền tảng, tương thích với mọi loại thiết bị màn hình điện thoại, đồng hồ, và máy tính bảng.'
+    description:
+      "Thiết kế App cho Smartphone bằng công nghệ React Native đáp ứng mọi tiêu chuẩn của Apple iOS và Google Android. Đảm bảo App luôn chạy tốt đa nền tảng, tương thích với mọi loại thiết bị màn hình điện thoại,và máy tính bảng.",
   },
   {
     title: "Outsourcing",
     icon: "/assets/icons/featured/outsource.png",
-    description: 'Với nhiều năm kinh nghiệm thực hiện dự án Web / App trên nền Drupal CMS và React Native, chúng tôi sẵn sàng nhận những dự án hoặc một phần của dự án lớn từ đối tác trong và ngoài nước. Dịch vụ bao gồm làm NEXTJS, REACTJS, HTML / CSS / JAVASCRIPT, phát triển React Native App...'
-  }
-]
+    description:
+      "Với nhiều năm kinh nghiệm thực hiện dự án Web / App trên nền ReactJS, NextJS và React Native, chúng tôi sẵn sàng nhận những dự án hoặc một phần của dự án lớn từ đối tác trong và ngoài nước. Dịch vụ bao gồm làm HTML / CSS, ReactJS, NextJS và phát triển React Native App...",
+  },
+];
 
 export default function FeaturedProducts() {
   const renderFeaturedProducts = () => {
     return items.map((items, index) => {
       return (
-        <FeaturedProductCard key={`featured-products-details__item-${index}`} {...items} />
-      )
-    })
-  }
+        <FeaturedProductCard
+          key={`featured-products-details__item-${index}`}
+          {...items}
+        />
+      );
+    });
+  };
 
   return (
-    <section className="roxanatech-featured-products pt-[50px] md:pt-[60px]">
+    <section
+      id="roxanatech-services"
+      className="roxanatech-featured-products pt-10"
+    >
       <div className="roxanatech-featured-products__container">
         <div className="roxanatech-featured-products__content">
-          <div className="max-w-[560px] md:px-4">
-            <div className="relative mb-[47px] text-center">
-              <h2>
-                Chọn bảng thông tin cho mọi giai đoạn trong hành trình khách
-                hàng của bạn
-              </h2>
+          <div className="px-4">
+            <div className="relative pb-[47px] text-center">
+              <h2 id="roxanatech-services">Dịch vụ của RoxanaTech</h2>
               <p className="text-base md:text-lg md:font-medium">
-                Sự nổi lên của thiết bị di động đã thay đổi hoàn toàn cách chúng
-                ta sử dụng thông tin và các kênh phù hợp nhất trên thế giới như
-                Facebook và Instagram hầu như chỉ được sử dụng trên thiết bị di
-                động
+                Là công ty thiết kế website / thiết kế app chuyên nghiệp, chúng
+                tôi đã tạo ra hàng trăm Website / App chất lượng cao gửi tới
+                khách hàng.
+                <br />
+                Nhiều loại hình website / app đã được xây dựng bao gồm: Website
+                doanh nghiệp, website / app bán hàng / thương mại điện tử / app
+                vận tải định vị Google Map, website báo điện tử, website / app
+                số hóa doanh nghiệp.v.v.
               </p>
             </div>
           </div>
