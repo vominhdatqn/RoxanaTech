@@ -12,6 +12,7 @@
                 transition: all 0.4s ease-in;
             }
             .roxanatech-demo-item {
+
                 &__fancyboy {
 
                 }
@@ -22,17 +23,21 @@
                     border-radius: 50px;
                     color: #0d1741;
                     overflow: hidden;
-                    position: absolute;
+                    // position: absolute;
                     font-size: 16px;
                     font-weight: 500;
-                    z-index: 9;
+                    // top: 50%;
+                    // left: 50%;
+                    // -ms-transform: translate(-50%, -50%);
+                    // transform: translate(-50%, -50%);
+                    z-index: 10;
                     opacity: 0;
-                    height: 50px;
+                    // height: 50px;
                     line-height: 50px;
                     padding: 0 40px;
                     box-shadow: none;
                     transition: all 0.5s ease;
-                    transform: perspective(1px) translateZ(0);
+                    // transform: perspective(1px) translateZ(0);
                     & {
                         @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
                     }

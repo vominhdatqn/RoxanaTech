@@ -38,14 +38,21 @@ export default function FeaturedProducts() {
   return (
     <section
       id="roxanatech-services"
-      className="roxanatech-featured-products pt-10"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+      className="roxanatech-featured-products pt-6"
     >
       <div className="roxanatech-featured-products__container">
         <div className="roxanatech-featured-products__content">
-          <div className="px-4">
+          <div className="max-w-[650px] px-4">
             <div className="relative pb-[47px] text-center">
-              <h2 id="roxanatech-services">Dịch vụ của RoxanaTech</h2>
-              <p className="text-base md:text-lg md:font-medium">
+              <h2 data-aos="fade-down" id="roxanatech-services">
+                Dịch vụ của RoxanaTech
+              </h2>
+              <p
+                data-aos="fade-up"
+                className="text-base md:text-lg md:font-medium"
+              >
                 Là công ty thiết kế website / thiết kế app chuyên nghiệp, chúng
                 tôi đã tạo ra hàng trăm Website / App chất lượng cao gửi tới
                 khách hàng.

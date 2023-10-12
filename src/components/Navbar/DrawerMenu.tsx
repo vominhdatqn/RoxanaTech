@@ -14,7 +14,7 @@ import {
 } from "@ant-design/icons";
 import { Button, Drawer, DrawerProps, Menu } from "antd";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import type { MenuProps, MenuTheme } from "antd";
 
@@ -51,13 +51,10 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem("Về chúng tôi", "ve-chung-toi"),
-  getItem("Dịch vụ", "sub1", null, [
-    getItem("Bảng giá", "bang-gia"),
-    getItem("Chụp Album cưới", "chup-album-cuoi"),
-    getItem("Phóng sự ngày cưới", "dich-vu-phong-su-ngay-cuoi"),
-  ]),
-  getItem("Stories & Tips", "bai-viet"),
+  getItem("Trang chủ", "/"),
+  getItem("Demos", "roxanatech-demos"),
+  getItem("Dịch vụ", "roxanatech-services"),
+  getItem("Bảng giá", "roxanatech-pricing-plan"),
   getItem("Liên hệ", "lien-he"),
 ];
 
@@ -65,6 +62,7 @@ const DrawerMenu: ForwardRefRenderFunction<DrawerMenuRef, DrawerProps> = (
   props,
   ref
 ) => {
+  const pathname = usePathname();
   const router = useRouter();
   // states
   const [open, setOpen] = useState(false);
@@ -78,8 +76,19 @@ const DrawerMenu: ForwardRefRenderFunction<DrawerMenuRef, DrawerProps> = (
   };
 
   const onClick: MenuProps["onClick"] = (e) => {
-    router.push(`/${e.key}`);
+    const element = document.getElementById(e.key);
     setOpen(false);
+    if (e.key === "lien-he") return router.push(`/${e.key}`);
+    if (pathname !== "/lien-he" && element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      return element.scrollIntoView({ behavior: "smooth" });
+    }
+    router.push("/");
+    setTimeout(() => {
+      const element = document.getElementById(e.key);
+      return element?.scrollIntoView({ behavior: "smooth" });
+    }, 1000);
+    // router.push(`/${e.key}`);
   };
 
   useImperativeHandle(
@@ -113,7 +122,7 @@ const DrawerMenu: ForwardRefRenderFunction<DrawerMenuRef, DrawerProps> = (
 
   return (
     <>
-      <Button onClick={showDrawer} size='large' icon={<MenuOutlined />} />
+      <Button onClick={showDrawer} size="large" icon={<MenuOutlined />} />
       <Drawer
         className="drawer-menu"
         width={320}

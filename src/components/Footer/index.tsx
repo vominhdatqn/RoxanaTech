@@ -1,19 +1,23 @@
-// import colors from "@/styles/colors";
-// import Link from "next/link";
-// import {
-//   BiLogoFacebookCircle,
-//   BiLogoTiktok,
-//   BiLogoYoutube,
-// } from "react-icons/bi";
+"use client";
 import Link from "next/link";
-import colors from "@/styles/colors";
-import {
-  BiLogoFacebookCircle,
-  BiLogoTiktok,
-  BiLogoYoutube,
-} from "react-icons/bi";
+import React from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const handleScrollToView = (elementId: string) => () => {
+    if (pathname === "/") {
+      const element = document.getElementById(elementId);
+      return element?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/");
+      setTimeout(() => {
+        const element = document.getElementById(elementId);
+        return element?.scrollIntoView({ behavior: "smooth" });
+      }, 1000);
+    }
+  };
   return (
     <footer className="footer">
       <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -22,37 +26,58 @@ export default function Footer() {
             Danh mục
           </p>
           <Link
-            aria-label="Về chúng tôi"
+            aria-label="Trang chủ"
             rel="noopener noreferrer"
-            href={"/ve-chung-toi"}
+            href={"/"}
             className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
           >
-            Về chúng tôi
+            Trang chủ
           </Link>
-          <Link
+          {/* <Link
             aria-label="Dịch vụ"
             rel="noopener noreferrer"
-            href={"#"}
+            href={""}
             className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
           >
             Demos
-          </Link>
-          <Link
+          </Link> */}
+          <span
+            aria-label="Demos"
+            onClick={handleScrollToView("roxanatech-demos")}
+            className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
+          >
+            Demos
+          </span>
+          <span
+            aria-label="Dịch vụ"
+            onClick={handleScrollToView("roxanatech-services")}
+            className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
+          >
+            Dịch vụ
+          </span>
+          {/* <Link
             aria-label="Váy cưới"
             rel="noopener noreferrer"
             href={"#"}
             className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
           >
             Dịch vụ
-          </Link>
-          <Link
+          </Link> */}
+          <span
+            aria-label="Bảng giá"
+            onClick={handleScrollToView("roxanatech-pricing-plan")}
+            className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
+          >
+            Bảng giá
+          </span>
+          {/* <Link
             aria-label="Stories & Tips"
             rel="noopener noreferrer"
             href={"#"}
             className="pb-2 leading-5 hover:text-primary text-lg md:text-base transition-colors duration-300 cursor-pointer underline text-gray-800"
           >
             Bảng giá
-          </Link>
+          </Link> */}
         </div>
         <div className="space-y-2">
           <p className="text-lg md:text-base font-bold tracking-wide">
@@ -88,7 +113,7 @@ export default function Footer() {
               href="https://www.google.com/maps"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="292/6A Xô Viết Nghệ Tĩnh, Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh"
+              aria-label="Địa chỉ"
               title="292/6A Xô Viết Nghệ Tĩnh, Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh"
               className="link text-lg md:text-base"
             >

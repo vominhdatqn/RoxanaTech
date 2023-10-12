@@ -3,7 +3,8 @@
 import React, { useRef } from "react";
 import { BiSolidCalendarCheck } from "react-icons/bi";
 import OrderTime, { OrderTimeRef } from "../Modal/OrderTime";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { isEmpty } from "lodash";
 
 interface TabBarItemProps {
   name: string;
@@ -20,18 +21,47 @@ export default function TabBarItem({
 }: TabBarItemProps) {
   const orderTimeRef = useRef<OrderTimeRef>(null);
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleShowOrderTime = () => {
     orderTimeRef.current?.onShow();
   };
 
-  const handleGoToPage = () => {
-    router.push(url);
+  // const handleGoToPage = () => {
+  //   router.push(url);
+  // };
+  const handleScrollToView = () => {
+    if (url !== "lien-he") {
+      if (pathname === "/") {
+        const element = document.getElementById(url);
+        return element?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        router.push("/");
+        setTimeout(() => {
+          const element = document.getElementById(url);
+          return element?.scrollIntoView({ behavior: "smooth" });
+        }, 1000);
+      }
+    } else {
+      router.push("/lien-he");
+    }
+    // let element = document.getElementById(elementId);
+    // if (pathname !== "/lien-he" && element) {
+    //   // 👇 Will scroll smoothly to the top of the next section
+    //   router.push("/");
+    //   setTimeout(() => {
+    //     const element = document.getElementById(elementId);
+    //     return element?.scrollIntoView({ behavior: "smooth" });
+    //   }, 1000);
+    // }
+    // // const element = document.getElementById(elementId);
+    // return element?.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <button
       type="button"
-      onClick={handleGoToPage}
+      onClick={handleScrollToView}
       className="relative inline-flex flex-col items-center justify-center font-medium px-3 hover:bg-gray-50 group"
     >
       {/* {tooltip && (
@@ -48,7 +78,7 @@ export default function TabBarItem({
         </>
       )} */}
       {icon}
-      <span className="text-sm text-gray-500 group-hover:text-primary capitalize">
+      <span className="text-sm text-gray-500 group-hover:text-primary">
         {name}
       </span>
     </button>

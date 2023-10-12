@@ -12,14 +12,14 @@ import { getFirestore } from "firebase/firestore";
 // };
 
 const firebaseConfig = {
-    apiKey: "AIzaSyC3W4hFSBLf4m4HPOpKEsIDeyhotGvmPU4",
-    authDomain: "mardoll-studio.firebaseapp.com",
-    projectId: "mardoll-studio",
-    storageBucket: "mardoll-studio.appspot.com",
-    messagingSenderId: "1055372331359",
-    appId: "1:1055372331359:web:10acbabd5d436637a68eea",
-    measurementId: "G-BGJY56GG2M"
-};
+    apiKey: "AIzaSyCScj_PXo5qzgazwseJPs47ro8BpbS0y84",
+    authDomain: "roxanatech-b4c96.firebaseapp.com",
+    projectId: "roxanatech-b4c96",
+    storageBucket: "roxanatech-b4c96.appspot.com",
+    messagingSenderId: "556483432220",
+    appId: "1:556483432220:web:049afa00131bf7a6bbf4d9",
+    measurementId: "G-XN9H65LF3W"
+  };
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional

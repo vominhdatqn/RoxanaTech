@@ -19,6 +19,7 @@ export const FormItem = <TFieldValues extends FieldValues = FieldValues>({
     control,
     name,
     help,
+    hasFeedback = false,
     ...props
 }: FormItemProps<TFieldValues>) => {
     const { field, fieldState, formState: { errors } } = useController({ name, control });
@@ -29,7 +30,7 @@ export const FormItem = <TFieldValues extends FieldValues = FieldValues>({
     return (
         <AntdForm.Item
             {...props}
-            hasFeedback
+            hasFeedback={hasFeedback}
             name={name as string}
             // initialValue={field.value}
             normalize={handleNormalize}

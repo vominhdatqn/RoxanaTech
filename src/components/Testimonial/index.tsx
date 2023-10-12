@@ -1,9 +1,13 @@
 "use client";
+import React from 'react';
 import CustomCarousel from "../CustomCarousel";
 
 export default function Testimonial() {
   return (
-    <section className="bg-white place-items-center px-1 md:px-6">
+    <section data-aos="fade-left"
+    data-aos-anchor="#example-anchor"
+    data-aos-offset="500"
+    data-aos-duration="500" className="bg-white place-items-center px-1 md:px-6">
       <CustomCarousel dots={false}>
         <div className="px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
           <figure className="mx-auto max-w-screen-md">
@@ -60,7 +64,7 @@ export default function Testimonial() {
             <figcaption className="flex items-center justify-center mt-6 space-x-3">
               <img
                 className="w-6 h-6 rounded-full"
-                src="https://firebasestorage.googleapis.com/v0/b/mardoll-studio.appspot.com/o/tinh.jpeg?alt=media&token=8ff1631e-5fa2-4be6-b10d-9d6ae325403e&_gl=1*19smwp0*_ga*NDA2OTQ5NTkyLjE2OTE4MTY3ODc.*_ga_CW55HF8NVT*MTY5NzAzNjA0My42NS4xLjE2OTcwMzYxMzIuMzcuMC4w"
+                src="https://firebasestorage.googleapis.com/v0/b/mardoll-studio.appspot.com/o/nga.jpeg?alt=media&token=2ecf128e-1971-45aa-b631-ac06845e2795&_gl=1*zvvu9j*_ga*MTY5MTk5MTQ5NS4xNjk3MDg2MDIx*_ga_CW55HF8NVT*MTY5NzA5MjgxMS4yLjAuMTY5NzA5MjgxMS42MC4wLjA"
                 alt="profile picture"
               />
               <div className="flex items-center divide-x-2 divide-gray-500 ">

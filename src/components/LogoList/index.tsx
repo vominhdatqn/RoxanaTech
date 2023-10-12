@@ -1,3 +1,5 @@
+import { base64 } from "@/data/base64";
+import Image from "next/image";
 import React from "react";
 
 export default function LogoList() {
@@ -27,10 +29,19 @@ export default function LogoList() {
     <div className="flex justify-between py-2 mr-[-15px] ml-[-15px] my-0 md:-mx-2.5 md:my-0">
       {partnerLogos.map((partnerLogo, index) => (
         <div key={index}>
-          <img
+          {/* <img
             src={partnerLogo.src}
             alt={partnerLogo.alt}
             className="h-[60px] object-cover"
+          /> */}
+          <Image
+             alt={partnerLogo.alt}
+             src={partnerLogo.src}
+             className="h-[60px] object-cover"
+             height={60}
+             width={80}
+             placeholder="blur"
+             blurDataURL={base64}
           />
         </div>
       ))}

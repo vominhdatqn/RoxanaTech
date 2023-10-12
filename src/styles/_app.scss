@@ -16,6 +16,10 @@
 @import './components/featuredProducts';
 @import './components/demos';
 
+section {
+  overflow:hidden;
+}
+  
 .main {
   width: 100vw;
   min-height: 100vh;

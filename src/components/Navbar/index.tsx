@@ -19,24 +19,22 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
   const { isVisible } = useScrollActiveShadow();
+  const orderTimeRef = useRef<OrderTimeRef>(null);
+  const handleShowOrderTime = () => {
+    orderTimeRef.current?.onShow();
+  };
 
   const handleScrollToView = (elementId: string) => () => {
     const element = document.getElementById(elementId);
-    if (pathname === "/" && element) {
+    if (pathname !== "/lien-he" && element) {
       // 👇 Will scroll smoothly to the top of the next section
       return element.scrollIntoView({ behavior: "smooth" });
     }
     router.push("/");
     setTimeout(() => {
       const element = document.getElementById(elementId);
-      console.log("element", element);
       return element?.scrollIntoView({ behavior: "smooth" });
     }, 1000);
-    // navigate()
-    //   .then()
-    //   .finally(() => {
-    //     () => router.push("/")
-    //   });
   };
   return (
     <div className="sticky w-full top-0 z-50">
@@ -57,7 +55,7 @@ export default function Navbar() {
             <Link
               className="underline-hover mr-5 uppercase"
               href="/"
-              aria-label="Về chúng tôi"
+              aria-label="Trang chủ"
               rel="noopener noreferrer"
             >
               Trang chủ
@@ -116,28 +114,31 @@ export default function Navbar() {
 
         <div className="hidden md:flex">
           <Button
-            aria-label="Khám phá"
+            aria-label="Đặt hẹn"
             type="text"
             shape="round"
             className="!bg-gradient-to-r from-primary to-green-700"
             size="large"
+            onClick={handleShowOrderTime}
           >
-            Khám phá
+            Đặt hẹn
           </Button>
         </div>
 
         <div className="flex md:hidden gap-3">
           <Button
-            aria-label="Khám phá"
+            aria-label="Đặt hẹn"
             type="text"
             shape="round"
             className="!bg-gradient-to-r from-primary to-green-700"
             size="large"
+            onClick={handleShowOrderTime}
           >
-            Khám phá
+            Đặt hẹn
           </Button>
           <DrawerMenu />
         </div>
+        <OrderTime ref={orderTimeRef} />
       </nav>
     </div>
   );

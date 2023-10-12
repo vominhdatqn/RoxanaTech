@@ -11,9 +11,9 @@ import { AOSInit } from "@/lib/aos";
 import MainContainer from "@/components/MainContainer";
 
 export const metadata: Metadata = {
-  title: "RoxanaTech - Thiết kế và phát triển website",
+  title: "RoxanaTech - Thiết kế website/app chuyên nghiệp cho doanh nghiệp",
   description:
-    "RoxanaTech - Thiết kế phát triển website, ứng dụng di động trên nền tảng android và ios.",
+    "Thiết kế website/app cho doanh nghiệp, uy tín, chuẩn UX,UI✅ website/app doanh nghiệp chuẩn SEO ✅ tại TPHCM và các tỉnh miền Tây nam bộ. Dịch vụ uy tín, hỗ trợ kỹ thuật 24/7, tư vấn miễn phí theo yêu cầu chỉ từ 2tr8 ✅ tặng hosting tên miền tốc độ cao. Miễn phí dùng thử ✅, thiết kế chọn gói website/app tại RoxanaTech.",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -23,16 +23,27 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   keywords: [
     "RoxanaTech",
-    "Roxanatech - Thiết kế và phát triển website",
+    "RoxanaTech - Thiết kế website/app chuyên nghiệp cho doanh nghiệp",
     "Thiết kế và phát triển website",
     "roxanatech",
-    "roxanatech - thiết kế và phát triển website",
+    "roxanatech - website/app chuyên nghiệp cho doanh nghiệp",
     "thiết kế và phát triển ứng dụng di động",
     "thiết kế ứng dụng",
     "thiết kế ứng dụng android",
     "thiết kế ứng dụng ios",
     "thiết kế ứng dụng android và ios",
     "thiết kế website",
+    "thiết kế ứng dụng di động",
+    "thiết kế ứng dụng di động tại bình thạnh",
+    "thiết kế ứng dụng web tại bình thạnh",
+    "thiết kế ứng dụng website tại bình thạnh",
+    "thiết kế app tại bình thạnh",
+    "thiết kế app tại sài gòn",
+    "thiết kế app tại hồ chí minh",
+    "thiết kế app tại long an",
+    "thiết kế app tại Long An",
+    "thiết kế app tại bến tre",
+    "thiết kế app tại Bến Tre",
   ],
   creator: "Đạt Võ",
   publisher: "Đoàn Thị Kim Khoa",
@@ -41,29 +52,29 @@ export const metadata: Metadata = {
       rel: "icon",
       type: "image/png",
       sizes: "32x32",
-      url: "/assets/favicon/favicon-32x32.png",
+      url: "/assets/favicon/roxanatech_logo.png",
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "16x16",
-      url: "/assets/favicon/favicon-16x16.png",
+      url: "/assets/favicon/roxanatech_logo.png",
     },
     {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      url: "/assets/favicon/favicon-180x180.png",
+      url: "/assets/favicon/roxanatech_logo.png",
     },
   ],
   openGraph: {
     images: [
       {
-        url: "https://mardollstudio.com/assets/images/bang-gia-background.jpeg",
+        url: "https://roxanatech.com/assets/images/roxanatech_background.png",
         width: 800,
         height: 600,
       },
       {
-        url: "https://mardollstudio.com/assets/images/bang-gia-background.jpeg",
+        url: "https://roxanatech.com/assets/images/roxanatech_background.png",
         width: 1800,
         height: 1600,
         alt: "RoxanaTech - Thiết kế phát triển website, ứng dụng di động trên nền tảng android và ios.",
@@ -86,8 +97,8 @@ export default function RootLayout({
   return (
     <>
       <head>
-        {/* <meta property="fb:app_id" content="152330011278908" /> */}
-        {/* <script
+        <meta property="fb:app_id" content="2317382268469700" />
+        <script
           className="rank-math-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -96,16 +107,16 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "Organization",
-                  "@id": "https://mardollstudio.com/#organization",
-                  name: "Mardoll Studio",
-                  url: "https://mardollstudio.com",
+                  "@id": "https://roxanatech.com/#organization",
+                  name: "RoxanaTech - Thiết kế và phát triển website",
+                  url: "https://roxanatech.com",
                   logo: {
                     "@type": "ImageObject",
-                    "@id": "https://mardollstudio.com/#logo",
-                    url: "https://mardollstudio.com/assets/marrdoll_studio_logo.jpeg",
+                    "@id": "https://roxanatech.com/#logo",
+                    url: "https://roxanatech.com/assets/roxanatech_logo.png",
                     contentUrl:
-                      "https://mardollstudio.com/assets/marrdoll_studio_logo.jpeg",
-                    caption: "Mardoll Studio",
+                      "https://roxanatech.com/assets/roxanatech_logo.png",
+                    caption: "RoxanaTech - Thiết kế và phát triển website",
                     inLanguage: "vi",
                     width: "268",
                     height: "268",
@@ -113,40 +124,40 @@ export default function RootLayout({
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://mardollstudio.com/#website",
-                  url: "https://mardollstudio.com",
-                  name: "Mardoll Studio",
+                  "@id": "https://roxanatech.com/#website",
+                  url: "https://roxanatech.com",
+                  name: "RoxanaTech - Thiết kế và phát triển website",
                   publisher: {
-                    "@id": "https://mardollstudio.com/#organization",
+                    "@id": "https://roxanatech.com/#organization",
                   },
                   inLanguage: "vi",
                   potentialAction: {
                     "@type": "SearchAction",
-                    target: "https://mardollstudio.com/?s={search_term_string}",
+                    target: "https://roxanatech.com/?s={search_term_string}",
                     "query-input": "required name=search_term_string",
                   },
                 },
                 {
                   "@type": "ImageObject",
                   "@id":
-                    "https://mardollstudio.com/assets/images/bang-gia-background.jpeg",
-                  url: "https://mardollstudio.com/assets/images/bang-gia-background.jpeg",
+                    "https://roxanatech.com/assets/images/roxanatech_background.png",
+                  url: "https://roxanatech.com/assets/images/roxanatech_background.png",
                   width: "200",
                   height: "200",
                   inLanguage: "vi",
                 },
                 {
                   "@type": "WebPage",
-                  "@id": "https://mardollstudio.com/#webpage",
-                  url: "https://mardollstudio.com/",
-                  name: "Mardoll Studio - Chụp ảnh cưới đẹp Quy Nhơn",
+                  "@id": "https://roxanatech.com/#webpage",
+                  url: "https://roxanatech.com/",
+                  name: "RoxanaTech - Thiết kế và phát triển website",
                   datePublished: "2023-09-09T01:18:53+07:00",
                   dateModified: "2023-09-24T21:50:32+07:00",
-                  about: { "@id": "https://mardollstudio.com/#organization" },
-                  isPartOf: { "@id": "https://mardollstudio.com/#website" },
+                  about: { "@id": "https://roxanatech.com/#organization" },
+                  isPartOf: { "@id": "https://roxanatech.com/#website" },
                   primaryImageOfPage: {
                     "@id":
-                      "https://mardollstudio.com/assets/images/bang-gia-background.jpeg",
+                      "https://roxanatech.com/assets/images/roxanatech_background.png",
                   },
                   inLanguage: "vi",
                 },
@@ -168,34 +179,34 @@ export default function RootLayout({
                 // },
                 {
                   "@type": "Article",
-                  headline: "Mardoll Studio - Chụp ảnh cưới đẹp Quy Nhơn",
+                  headline: "RoxanaTech - Thiết kế và phát triển website",
                   keywords:
                     // "Mardoll Studio,D\u1ecbch v\u1ee5 ch\u1ee5p \u1ea3nh c\u01b0\u1edbi,H\u1ec7 th\u1ed1ng showroom c\u01b0\u1edbi",
-                    "mardoll studio, Mardoll Studio, Mardoll Studio - Chụp ảnh cưới đẹp Quy Nhơn, mardoll studio - chụp ảnh cưới đẹp quy nhơn,chụp ảnh cưới đẹp ở quy nhơn, Mardoll Studio - Chụp ảnh cưới đẹp Quy Nhơn",
+                    "RoxanaTech, Roxanatech - Thiết kế và phát triển website, Thiết kế và phát triển website, roxanatech, roxanatech - thiết kế và phát triển website, thiết kế và phát triển ứng dụng di động, thiết kế ứng dụng, thiết kế ứng dụng android, thiết kế ứng dụng ios, thiết kế ứng dụng android và ios, thiết kế website",
                   datePublished: "2023-09-09T01:18:53+07:00",
                   dateModified: "2023-09-24T21:50:32+07:00",
-                  author: { "@id": "https://mardollstudio.com/bai-viet" },
+                  author: { "@id": "https://roxanatech.com/" },
                   publisher: {
-                    "@id": "https://mardollstudio.com/#organization",
+                    "@id": "https://roxanatech.com/#organization",
                   },
                   description:
-                    "Mardoll Studio - Ch\u1ee5p \u1ea3nh c\u01b0\u1edbi đẹp Quy Nhơn, là một trong những công ty cung cấp dịch vụ cưới hàng đầu Việt Nam. Chúng tôi sở hữu hệ thống showroom cưới tại Quy Nhơn",
-                  name: "Mardoll Studio - Chụp ảnh cưới đẹp Quy Nhơn",
-                  "@id": "https://mardollstudio.com/#richSnippet",
-                  isPartOf: { "@id": "https://mardollstudio.com/#webpage" },
+                    "RoxanaTech - Thiết kế phát triển website, ứng dụng di động trên nền tảng android và ios.",
+                  name: "RoxanaTech - Thiết kế và phát triển website",
+                  "@id": "https://roxanatech.com/#richSnippet",
+                  isPartOf: { "@id": "https://roxanatech.com/#webpage" },
                   image: {
                     "@id":
-                      "https://mardollstudio.com/assets/images/bang-gia-background.jpeg",
+                      "https://roxanatech.com/assets/images/roxanatech_background.png",
                   },
                   inLanguage: "vi",
                   mainEntityOfPage: {
-                    "@id": "https://mardollstudio.com/#webpage",
+                    "@id": "https://roxanatech.com/#webpage",
                   },
                 },
               ],
             }),
           }}
-        /> */}
+        />
       </head>
       <html lang="en">
         <AOSInit />

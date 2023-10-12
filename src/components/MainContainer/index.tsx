@@ -34,7 +34,6 @@ const MainContainer: React.FC<MainContainerProps> = ({ children }) => {
       <FacebookMessenger />
       <Footer />
       <TabBar />
-      {/* <NavigationEvents /> */}
     </>
   );
 };

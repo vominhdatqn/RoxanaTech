@@ -6,6 +6,8 @@ import {
   DatePicker,
   message,
   TimePicker,
+  Space,
+  Typography,
 } from "antd";
 import type { FormInstance } from "antd/es/form";
 import { useForm } from "react-hook-form";
@@ -19,6 +21,8 @@ import { isEmpty } from "lodash";
 import { firestore } from "@/lib/firebase";
 import { collection, addDoc } from "firebase/firestore";
 
+const { Text } = Typography;
+
 const currentDate = dayjs();
 
 const schema = yup
@@ -30,30 +34,30 @@ const schema = yup
       .test("phone", "Số điên thoại sai định dạng", (str, context) => {
         return isVietnamesePhoneNumber(str);
       }),
-    time: yup
-      .date()
-      .transform((currentValue, originalValue) => {
-        // Transform the TimePicker value into a Date object
-        return originalValue ? dayjs(originalValue, "HH:mm").toDate() : null;
-      })
-      .nullable()
-      .test(
-        "is-valid-time",
-        "Thời gian dự kiến phải nằm trong khung giờ từ 9:00 - 21:30",
-        (value) => {
-          if (!value) return false; // Handle null or undefined values
+    // time: yup
+    //   .date()
+    //   .transform((currentValue, originalValue) => {
+    //     // Transform the TimePicker value into a Date object
+    //     return originalValue ? dayjs(originalValue, "HH:mm").toDate() : null;
+    //   })
+    //   .nullable()
+    //   .test(
+    //     "is-valid-time",
+    //     "Thời gian dự kiến phải nằm trong khung giờ từ 9:00 - 21:30",
+    //     (value) => {
+    //       if (!value) return false; // Handle null or undefined values
 
-          const selectedTime = dayjs(value);
+    //       const selectedTime = dayjs(value);
 
-          const startTime = dayjs("09:00", "HH:mm");
-          const endTime = dayjs("21:30", "HH:mm");
+    //       const startTime = dayjs("09:00", "HH:mm");
+    //       const endTime = dayjs("21:30", "HH:mm");
 
-          return (
-            selectedTime.isAfter(startTime) && selectedTime.isBefore(endTime)
-          );
-        }
-      )
-      .required("Vui lòng chọn thời gian dự kiến!"),
+    //       return (
+    //         selectedTime.isAfter(startTime) && selectedTime.isBefore(endTime)
+    //       );
+    //     }
+    //   )
+    //   .required("Vui lòng chọn thời gian dự kiến!"),
     calendar: yup
       .date()
       .min(
@@ -70,7 +74,7 @@ const defaultValues = {
   name: "",
   phone: "",
   calendar: currentDate as Dayjs,
-  time: dayjs(currentDate.format("HH:mm"), "HH:mm").add(1, "hour"),
+  // time: dayjs(currentDate.format("HH:mm"), "HH:mm").add(1, "hour"),
 };
 
 interface OrderTimeFormProps {
@@ -107,7 +111,7 @@ const OrderTimeForm = ({ handleClose }: OrderTimeFormProps) => {
             const newItem = {
               name: data?.name,
               phone: data?.phone,
-              time: data?.time?.toISOString(),
+              // time: data?.time?.toISOString(),
               createTime: data?.calendar.toISOString(),
             };
             const docRef = await addDoc(
@@ -123,7 +127,18 @@ const OrderTimeForm = ({ handleClose }: OrderTimeFormProps) => {
                 reset();
                 messageApi.open({
                   type: "success",
-                  content: "Đặt hẹn thành công",
+                  content: (
+                    <Space direction="vertical">
+                      <Text strong>
+                        Gửi thông tin liên hệ đến RoxanaTech thành công
+                      </Text>
+                      <Text>
+                        Chúng tôi sẽ liên hệ với khách hàng trong thời gian sớm
+                        nhất
+                      </Text>
+                    </Space>
+                  ),
+                  duration: 5,
                 });
               }, 1500);
             }
@@ -160,13 +175,13 @@ const OrderTimeForm = ({ handleClose }: OrderTimeFormProps) => {
             style={{ width: "100%" }}
           />
         </FormItem>
-        <FormItem control={control} name="time" label="Thời gian dự kiến">
+        {/* <FormItem control={control} name="time" label="Thời gian dự kiến">
           <TimePicker
             placeholder="Thời gian"
             format="HH:mm"
             className="h-[48px]"
           />
-        </FormItem>
+        </FormItem> */}
         <div className="flex justify-end pt-4">
           <Button
             size="large"
@@ -174,6 +189,7 @@ const OrderTimeForm = ({ handleClose }: OrderTimeFormProps) => {
             disabled={!isEmpty(errors)}
             type="primary"
             htmlType="submit"
+            // className="!bg-gradient-to-r from-primary to-green-700"
           >
             Đặt ngay
           </Button>

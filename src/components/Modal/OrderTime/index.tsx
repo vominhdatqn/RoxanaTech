@@ -6,6 +6,7 @@ import React, {
 } from "react";
 import { Button, Modal, ModalProps } from "antd";
 import OrderTimeForm from "./OrderTimeForm";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 interface OrderTimeRef {
   onShow: () => void;
@@ -15,6 +16,7 @@ const OrderTime: ForwardRefRenderFunction<OrderTimeRef, ModalProps> = (
   props,
   ref
 ) => {
+  const { width } = useWindowSize();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleShow = () => {
@@ -38,7 +40,15 @@ const OrderTime: ForwardRefRenderFunction<OrderTimeRef, ModalProps> = (
     <Modal
       open={isOpen}
       centered
-      title="Đặt hẹn"
+      title={
+        width <= 412 ? (
+          <p>
+            Đặt hẹn với RoxanaTech để <br /> được tư vấn trực tiếp
+          </p>
+        ) : (
+          "Đặt hẹn với RoxanaTech để được tư vấn trực tiếp"
+        )
+      }
       onCancel={handleClose}
       footer={null}
       // bodyStyle={{ overflowY: "scroll", height: "calc(100vh - 250px)" }}

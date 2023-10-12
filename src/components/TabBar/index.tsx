@@ -8,7 +8,7 @@ export default function TabBar() {
   const menus = [
     {
       name: "Trang chủ",
-      url: "/",
+      url: "trang-chu",
       icon: (
         <BiSolidHome
           size={24}
@@ -19,7 +19,7 @@ export default function TabBar() {
     },
     {
       name: "Bảng giá",
-      url: "",
+      url: "roxanatech-pricing-plan",
       icon: (
         <RiPriceTag2Fill
           size={24}
@@ -30,7 +30,7 @@ export default function TabBar() {
     },
     {
       name: "Dịch vụ",
-      url: "#",
+      url: "roxanatech-services",
       icon: (
         <MdMiscellaneousServices
           size={24}

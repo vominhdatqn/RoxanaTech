@@ -5,7 +5,7 @@ export default function PricingPlan() {
     <section id="roxanatech-pricing-plan" className="bg-white py-5">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
+          <h2 data-aos="flip-up" className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
             Bảng giá dịch vụ tại{" "}
             {/* bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text */}
             <span className="bg-gradient-to-r from-primary to-green-700 inline-block text-transparent bg-clip-text">
@@ -13,7 +13,8 @@ export default function PricingPlan() {
             </span>{" "}
             2023
           </h2>
-          <p className="mb-5 font-light text-gray-500 sm:text-xl">
+          <p data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom" className="mb-5 font-light text-gray-500 sm:text-xl">
             Hãy tham khảo chi phí thiết kế website/app và{" "}
             <span className="bg-gradient-to-r from-primary to-green-700 inline-block text-transparent bg-clip-text cursor-pointer">
               đăng ký
@@ -24,7 +25,7 @@ export default function PricingPlan() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-3">
           {/* <!-- Pricing Card --> */}
-          <div className="flex flex-col p-6 md:p-3  text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-3 ">
+          <div data-aos="fade-right" className="flex flex-col p-6 md:p-3  text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-3 ">
             <h3 className="text-2xl font-semibold">Gói thông tin cơ bản</h3>
             <div className="flex justify-center items-baseline my-6">
               <span className="mr-2 text-2xl font-extrabold">2.800.000</span>
@@ -230,7 +231,7 @@ export default function PricingPlan() {
             </ul>
           </div>
           {/* <!-- Pricing Card --> */}
-          <div className="flex flex-col p-6 md:p-3  text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-3 ">
+          <div data-aos="zoom-in" className="flex flex-col p-6 md:p-3  text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-3 ">
             <h3 className="text-2xl font-semibold">Gói bán hàng cơ bản</h3>
             <div className="flex justify-center items-baseline my-6">
               <span className="mr-2 text-2xl font-extrabold">5.000.000</span>
@@ -478,7 +479,7 @@ export default function PricingPlan() {
             </ul>
           </div>
           {/* <!-- Pricing Card --> */}
-          <div className="flex flex-col p-6 md:p-3  text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-3 ">
+          <div data-aos="zoom-in" className="flex flex-col p-6 md:p-3  text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-3 ">
             <h3 className="text-2xl font-semibold">App bán hàng cơ bản</h3>
             <div className="flex justify-center items-baseline my-6">
               <span className="mr-2 text-2xl font-extrabold">8.000.000</span>
@@ -667,7 +668,7 @@ export default function PricingPlan() {
             </ul>
           </div>
           {/* <!-- Pricing Card --> */}
-          <div className="flex flex-col p-6 md:p-3  text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-3 ">
+          <div data-aos="fade-left" className="flex flex-col p-6 md:p-3  text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-3 ">
             <h3 className="text-2xl font-semibold">
               Outsourcing ( tuỳ theo độ phức tạp của sản phẩm)
             </h3>

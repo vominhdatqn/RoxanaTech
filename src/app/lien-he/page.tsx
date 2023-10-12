@@ -63,7 +63,7 @@ export default async function Contact() {
                   <h4 className="text-dark mb-1 text-xl font-bold">
                     Số điện thoại
                   </h4>
-                  <p className="text-body-color text-base">0916 256 200</p>
+                  <p className="text-body-color text-base">0916 254 200</p>
                 </div>
               </div>
               <div className="mb-8 flex w-full max-w-[370px]">

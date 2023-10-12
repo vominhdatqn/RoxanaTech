@@ -1,9 +1,12 @@
+import { base64 } from "@/data/base64";
+import Image from "next/image";
 import React from "react";
 
 export default function WhyChooseUs() {
   return (
-    <section className="roxanatech-choose-us mt-32 pt-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-      <h2 className="mb-12 text-center text-3xl font-bold">
+    <section  data-aos="zoom-in" className="roxanatech-choose-us mt-10 md:mt-16 pt-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <h2 data-aos="fade-up"
+      data-aos-anchor-placement="top-center" className="mb-12 text-center text-3xl font-bold">
         Lý do chọn chúng tôi
       </h2>
 
@@ -13,12 +16,22 @@ export default function WhyChooseUs() {
             className="relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg"
             data-te-ripple-init
             data-te-ripple-color="light"
+            data-aos="fade-right"
           >
-            <img
+            <Image
+              alt="Illustration why choose us"
+              src="/assets/images/illustration_why-choose-us.jpg"
+              blurDataURL={base64}
+              placeholder="blur"
+              className="hero-image-left"
+              width={2000}
+              height={420}
+            />
+            {/* <img
               src="/assets/images/illustration_why-choose-us.jpg"
               className="w-full h-[420px] object-cover"
               alt="Illustration why choose us"
-            />
+            /> */}
             {/* <a href="#!">
               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,0%,0.4)] bg-fixed">
                 <div className="flex h-full items-center justify-center">
@@ -43,7 +56,7 @@ export default function WhyChooseUs() {
           </div>
         </div>
 
-        <div className="w-full shrink-0 grow-0 basis-auto md:px-6 lg:w-7/12">
+        <div data-aos="fade-left" className="w-full shrink-0 grow-0 basis-auto md:px-6 lg:w-7/12">
           <div className="mb-12 flex">
             <div className="shrink-0">
               <div className="rounded-md bg-gradient-to-r from-primary to-green-700 p-4 shadow-lg ">
