@@ -21,6 +21,8 @@ export interface Colors {
     secondary: string;
     orange: string;
     paragraph: string;
+    textPrimary: string;
+    textGray500: string;
 
     wildSand: string;
     white: string;

@@ -157,7 +157,7 @@ export default function ContactForm() {
         <FormItem control={control} name="email" label="Địa chỉ email">
           <Input
             placeholder="Nhập địa chỉ email của bạn!"
-            inputMode="numeric"
+            inputMode="email"
             className="h-[48px]"
           />
         </FormItem>

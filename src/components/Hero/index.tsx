@@ -1,7 +1,8 @@
 import React from "react";
-import { Typography } from "antd";
+import { Button, Typography } from "antd";
 import Image from "next/image";
 import { base64 } from "@/data/base64";
+import FreeButton from "./FreeButton";
 // import { getPlaiceholder } from "plaiceholder";
 // import fs from "node:fs/promises";
 
@@ -16,18 +17,33 @@ export default async function Hero() {
       <div className="roxanatech-hero px-5 md:px-0">
         <div className="roxanatech-hero-container">
           <div className="roxanatech-hero-content">
-            <h1 data-aos="fade-down" className="font-semibold pb-5 lg:text-[46px] xl:[60px]  text-center md:text-start">
+            <h1
+              data-aos="fade-down"
+              className="text-txtgreen font-semibold pb-5 lg:text-[46px] xl:[60px] text-center md:text-start"
+            >
               Thiết kế Website và App chuyên nghiệp
             </h1>
-            <p data-aos="fade-up" className="leading-[27px] my-5 text-lg text-center md:text-start">
+            <p
+              data-aos="fade-up"
+              className="mb-[10px] md:mb-[35px] leading-[27px] my-5 text-lg text-center md:text-start"
+            >
               Dù bạn đang kinh doanh bất cứ ngành hàng nào, RoxanaTech đều hỗ
               trợ bạn xây dựng Website/App kinh doanh quản lý hiệu quả nhất.
             </p>
+            <div data-aos="fade-up" className="relative w-full">
+              <div className="mx-auto md:mx-0 max-w-[360px] flex flex-col justify-center">
+                <FreeButton />
+                <p className="mt-8 text-center md:text-start text-sky-600 md:mt-[60px]">
+                  Nhận ngay ưu đãi giảm tới 100% giao diện Website hot nhất khi
+                  thiết kế website với RoxanaTech
+                </p>
+              </div>
+            </div>
           </div>
           <figure className="roxanatech-hero-image" data-aos="fade-up">
             <Image
               alt="hero Image"
-              src="/assets/images/123.jpeg"
+              src="/assets/images/output-onlinepngtools.png"
               blurDataURL={base64}
               placeholder="blur"
               width={2000}

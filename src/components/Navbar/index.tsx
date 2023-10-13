@@ -40,7 +40,7 @@ export default function Navbar() {
     <div className="sticky w-full top-0 z-50">
       {/* <StickyBanner /> */}
       <nav className={cn("navbar-container", isVisible && "shadow")}>
-        <div className="flex flex-row items-center">
+        <div className="flex flex-row items-center  py-4">
           <Link href="/" aria-label="Trang chủ" rel="noopener noreferrer">
             <Image
               src="/assets/roxanatech_logo.png"
@@ -53,7 +53,7 @@ export default function Navbar() {
           </Link>
           <div className="hidden md:flex items-center text-base justify-center ml-16">
             <Link
-              className="underline-hover mr-5 uppercase"
+              className="underline-hover text-base font-semibold mr-5 uppercase"
               href="/"
               aria-label="Trang chủ"
               rel="noopener noreferrer"
@@ -70,7 +70,7 @@ export default function Navbar() {
             <span
               aria-label="Demos"
               onClick={handleScrollToView("roxanatech-demos")}
-              className="underline-hover mr-5 uppercase cursor-pointer"
+              className="underline-hover text-base font-semibold mr-5 uppercase cursor-pointer"
             >
               Demos
             </span>
@@ -81,14 +81,14 @@ export default function Navbar() {
             <span
               aria-label="Dịch vụ"
               onClick={handleScrollToView("roxanatech-services")}
-              className="underline-hover mr-5 uppercase cursor-pointer"
+              className="underline-hover text-base font-semibold mr-5 uppercase cursor-pointer"
             >
               Dịch vụ
             </span>
             <span
               aria-label="Bảng giá"
               onClick={handleScrollToView("roxanatech-pricing-plan")}
-              className="underline-hover mr-5 uppercase cursor-pointer"
+              className="underline-hover text-base font-semibold mr-[60px] uppercase cursor-pointer before:content-[''] before:w-[40px] md:before:h-[40px] before:bg-cover before:bg-center before:absolute before:top-[-28px] before:z-[2] before:right-[-42px] before:bg-[url(/assets/icons/hot-deal.png)]"
             >
               Bảng giá
             </span>
@@ -102,7 +102,7 @@ export default function Navbar() {
               Bảng giá
             </Link> */}
             <Link
-              className="underline-hover mr-5 uppercase"
+              className="underline-hover text-base font-semibold mr-5 uppercase"
               href="/lien-he"
               aria-label="Liên hệ"
               rel="noopener noreferrer"
@@ -115,9 +115,9 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <Button
             aria-label="Đặt hẹn"
-            type="text"
+            type="primary"
             shape="round"
-            className="!bg-gradient-to-r from-primary to-green-700"
+            // className="!bg-gradient-to-r from-primary to-green-700"
             size="large"
             onClick={handleShowOrderTime}
           >
@@ -126,11 +126,11 @@ export default function Navbar() {
         </div>
 
         <div className="flex md:hidden gap-3">
-          <Button
+        <Button
             aria-label="Đặt hẹn"
-            type="text"
+            type="primary"
             shape="round"
-            className="!bg-gradient-to-r from-primary to-green-700"
+            // className="!bg-gradient-to-r from-primary to-green-700"
             size="large"
             onClick={handleShowOrderTime}
           >

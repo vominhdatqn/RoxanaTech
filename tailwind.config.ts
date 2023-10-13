@@ -14,6 +14,8 @@ const config: Config = {
       primary: colors.primary,
       secondary: colors.secondary,
       whiteRgba: colors.whiteRgba,
+      textGray500: colors.textGray500,
+      txtgreen: colors.textPrimary,
       ...colorsTW
     },
     extend: {

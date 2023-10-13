@@ -6,6 +6,8 @@ const colors: Colors = {
     // secondary: '#e4e6eb',
     orange: '#f16032',
     paragraph: '#565872',
+    textPrimary: '#096f47',
+    textGray500: '#424239',
 
     // Components
     wildSand: '#F6F6F6',
