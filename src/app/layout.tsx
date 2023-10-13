@@ -52,18 +52,18 @@ export const metadata: Metadata = {
       rel: "icon",
       type: "image/png",
       sizes: "32x32",
-      url: "/assets/favicon/roxanatech_logo.png",
+      url: "/assets/favicon/roxanatech-favicon.png",
     },
     {
       rel: "icon",
       type: "image/png",
       sizes: "16x16",
-      url: "/assets/favicon/roxanatech_logo.png",
+      url: "/assets/favicon/roxanatech-favicon.png",
     },
     {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      url: "/assets/favicon/roxanatech_logo.png",
+      url: "/assets/favicon/roxanatech-favicon.png",
     },
   ],
   openGraph: {
@@ -113,9 +113,9 @@ export default function RootLayout({
                   logo: {
                     "@type": "ImageObject",
                     "@id": "https://roxanatech.com/#logo",
-                    url: "https://roxanatech.com/assets/roxanatech_logo.png",
+                    url: "https://roxanatech.com/assets/roxanatech-favicon.png",
                     contentUrl:
-                      "https://roxanatech.com/assets/roxanatech_logo.png",
+                      "https://roxanatech.com/assets/roxanatech-favicon.png",
                     caption: "RoxanaTech - Thiết kế và phát triển website",
                     inLanguage: "vi",
                     width: "268",

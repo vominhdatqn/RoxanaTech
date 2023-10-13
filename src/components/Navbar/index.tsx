@@ -40,10 +40,10 @@ export default function Navbar() {
     <div className="sticky w-full top-0 z-50">
       {/* <StickyBanner /> */}
       <nav className={cn("navbar-container", isVisible && "shadow")}>
-        <div className="flex flex-row items-center  py-4">
+        <div className="flex flex-row items-center py-2">
           <Link href="/" aria-label="Trang chủ" rel="noopener noreferrer">
             <Image
-              src="/assets/roxanatech_logo.png"
+              src="/assets/output-onlinepngtools-1.png"
               alt="RoxanaTech Logo"
               className="w-[120px] h-[65px] object-cover"
               width={120}
@@ -126,7 +126,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex md:hidden gap-3">
-        <Button
+          <Button
             aria-label="Đặt hẹn"
             type="primary"
             shape="round"

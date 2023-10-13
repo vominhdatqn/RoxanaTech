@@ -11,7 +11,7 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#fff',
     icons: [
       {
-        src: '../assets/roxanatech_logo.png',
+        src: '../assets/roxanatech-favicon.png',
         sizes: 'any',
         type: 'image/x-icon',
       },
