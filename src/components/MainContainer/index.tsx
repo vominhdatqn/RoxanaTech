@@ -31,6 +31,7 @@ const MainContainer: React.FC<MainContainerProps> = ({ children }) => {
       <Navbar />
       <Suspense fallback={<Loader />}>{children}</Suspense>
       <FloatButton />
+
       <FacebookMessenger />
       <Footer />
       <TabBar />

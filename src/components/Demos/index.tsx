@@ -131,10 +131,10 @@ export default function Demos() {
           className="roxanatech-demos-tab__filter flex items-center py-10 md:py-0 gap-6"
         >
           <Button
-            className={cn(
-              activeIndex === 0 && "!bg-gradient-to-r from-primary to-green-700"
-            )}
-            type="text"
+            // className={cn(
+            //   activeIndex === 0 && "!bg-gradient-to-r from-primary to-green-700"
+            // )}
+            type={activeIndex === 0 ? "primary" : "text"}
             onClick={() => {
               setActiveIndex(0);
               setFilter(itemsAll);
@@ -144,10 +144,7 @@ export default function Demos() {
           </Button>
 
           <Button
-            className={cn(
-              activeIndex === 1 && "!bg-gradient-to-r from-primary to-green-700"
-            )}
-            type="text"
+            type={activeIndex === 1 ? "primary" : "text"}
             onClick={() => {
               setActiveIndex(1);
               setFilter(itemsWeb);
@@ -157,10 +154,7 @@ export default function Demos() {
           </Button>
 
           <Button
-            className={cn(
-              activeIndex === 2 && "!bg-gradient-to-r from-primary to-green-700"
-            )}
-            type="text"
+            type={activeIndex === 2 ? "primary" : "text"}
             onClick={() => {
               setActiveIndex(2);
               setFilter(itemMobile);

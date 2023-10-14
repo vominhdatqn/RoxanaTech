@@ -40,11 +40,11 @@ export default function FeaturedProducts() {
       id="roxanatech-services"
       data-aos="fade-up"
       data-aos-anchor-placement="top-center"
-      className="roxanatech-featured-products pt-6"
+      className="roxanatech-featured-products py-6"
     >
       <div className="roxanatech-featured-products__container">
         <div className="roxanatech-featured-products__content">
-          <div className="max-w-[650px] px-4">
+          <div className="px-4">
             <div className="relative pb-[47px] text-center">
               <h2 data-aos="fade-down" id="roxanatech-services">
                 Dịch vụ của RoxanaTech

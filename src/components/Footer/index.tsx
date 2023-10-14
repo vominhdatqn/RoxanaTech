@@ -9,18 +9,26 @@ export default function Footer() {
   const handleScrollToView = (elementId: string) => () => {
     if (pathname === "/") {
       const element = document.getElementById(elementId);
-      return element?.scrollIntoView({ behavior: "smooth" });
+      return window.scrollTo({
+        top: element!.offsetTop - 100,
+        behavior: "smooth",
+      });
+      // return element?.scrollIntoView({ behavior: "smooth" });
     } else {
       router.push("/");
       setTimeout(() => {
         const element = document.getElementById(elementId);
-        return element?.scrollIntoView({ behavior: "smooth" });
+        return window.scrollTo({
+          top: element!.offsetTop - 100,
+          behavior: "smooth",
+        });
+        // return element?.scrollIntoView({ behavior: "smooth" });
       }, 1000);
     }
   };
   return (
-    <footer className="footer">
-      <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-3">
+    <footer className="footer bg-white">
+      <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-3 px-6">
         <div className="space-y-2 flex flex-col sm:col-span-1">
           <p className="text-lg md:text-base font-bold tracking-wide text-gray-900">
             Danh mục
@@ -169,7 +177,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+      {/* <div className="flex flex-col-reverse justify-between py-5 px-6 border-t border-gray-300 bg-gray-300 lg:flex-row">
         <p className="text-sm text-gray-600">
           © Copyright 2023 RoxanaTech Inc. All rights reserved.
         </p>
@@ -205,6 +213,9 @@ export default function Footer() {
             </a>
           </li>
         </ul>
+      </div> */}
+      <div className="py-4 text-center text-gray-500 bg-gray-100">
+        <span>© Copyright 2023 RoxanaTech Inc. All rights reserved.</span>
       </div>
     </footer>
   );

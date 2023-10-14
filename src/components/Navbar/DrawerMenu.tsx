@@ -54,7 +54,16 @@ const items: MenuItem[] = [
   getItem("Trang chủ", "/"),
   getItem("Demos", "roxanatech-demos"),
   getItem("Dịch vụ", "roxanatech-services"),
-  getItem("Bảng giá", "roxanatech-pricing-plan"),
+  getItem(
+    <span
+      aria-label="Bảng giá"
+      // onClick={handleScrollToView("roxanatech-pricing-plan")}
+      className="before:content-[''] before:w-[30px] before:h-[30px] before:bg-cover before:bg-center before:absolute before:top-0 before:z-[2] before:left-[90px] before:bg-[url(/assets/icons/hot-deal.png)]"
+    >
+      Bảng giá
+    </span>,
+    "roxanatech-pricing-plan"
+  ),
   getItem("Liên hệ", "lien-he"),
 ];
 
@@ -81,12 +90,20 @@ const DrawerMenu: ForwardRefRenderFunction<DrawerMenuRef, DrawerProps> = (
     if (e.key === "lien-he") return router.push(`/${e.key}`);
     if (pathname !== "/lien-he" && element) {
       // 👇 Will scroll smoothly to the top of the next section
-      return element.scrollIntoView({ behavior: "smooth" });
+      return window.scrollTo({
+        top: (element as any)?.offsetTop - 100,
+        behavior: "smooth",
+      });
+      // return element.scrollIntoView({ behavior: "smooth" });
     }
     router.push("/");
     setTimeout(() => {
       const element = document.getElementById(e.key);
-      return element?.scrollIntoView({ behavior: "smooth" });
+      return window.scrollTo({
+        top: (element as any)?.offsetTop - 100,
+        behavior: "smooth",
+      });
+      // return element?.scrollIntoView({ behavior: "smooth" });
     }, 1000);
     // router.push(`/${e.key}`);
   };
@@ -109,9 +126,9 @@ const DrawerMenu: ForwardRefRenderFunction<DrawerMenuRef, DrawerProps> = (
     return (
       <a className="flex title-font font-medium items-center text-gray-900">
         <Image
-          src="/assets/roxanatech_logo.png"
+          src="/assets/output-onlinepngtools-1.png"
           alt="Mardoll Studio Logo"
-          className="w-21 h-12 object-cover"
+          className="w-[100px] h-14 object-cover"
           width={90}
           height={48}
           priority

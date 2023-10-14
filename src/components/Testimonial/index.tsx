@@ -1,13 +1,16 @@
 "use client";
-import React from 'react';
+import React from "react";
 import CustomCarousel from "../CustomCarousel";
 
 export default function Testimonial() {
   return (
-    <section data-aos="fade-left"
-    data-aos-anchor="#example-anchor"
-    data-aos-offset="500"
-    data-aos-duration="500" className="bg-white place-items-center px-1 md:px-6">
+    <section
+      data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500"
+      className="bg-white place-items-center px-1 md:px-6"
+    >
       <CustomCarousel dots={false}>
         <div className="px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
           <figure className="mx-auto max-w-screen-md">
@@ -23,7 +26,7 @@ export default function Testimonial() {
               />
             </svg>
             <blockquote>
-              <p className="text-xl px-6 md:px-0 md:text-2xl font-medium text-gray-900 ">
+              <p className="text-lg px-6 md:px-0 md:text-xl font-normal text-gray-900 ">
                 "RoxanaTech làm web giá vừa túi tiền và chất lượng. Đội ngũ hỗ
                 trợ nhiệt tình."
               </p>

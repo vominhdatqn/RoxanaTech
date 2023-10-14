@@ -33,13 +33,25 @@ export default function TabBarItem({
   const handleScrollToView = () => {
     if (url !== "lien-he") {
       if (pathname === "/") {
+        if (url === "trang-chu") {
+          return window.scrollTo({ top: 0, behavior: "smooth" });
+        }
         const element = document.getElementById(url);
-        return element?.scrollIntoView({ behavior: "smooth" });
+        return window.scrollTo({
+          top: element!.offsetTop - 100,
+          behavior: "smooth",
+        });
+
+        // return element?.scrollIntoView({ behavior: "smooth" });
       } else {
         router.push("/");
         setTimeout(() => {
           const element = document.getElementById(url);
-          return element?.scrollIntoView({ behavior: "smooth" });
+          return window.scrollTo({
+            top: (element as any)?.offsetTop - 100,
+            behavior: "smooth",
+          });
+          // return element?.scrollIntoView({ behavior: "smooth" });
         }, 1000);
       }
     } else {

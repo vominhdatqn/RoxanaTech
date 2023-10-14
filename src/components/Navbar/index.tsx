@@ -27,13 +27,22 @@ export default function Navbar() {
   const handleScrollToView = (elementId: string) => () => {
     const element = document.getElementById(elementId);
     if (pathname !== "/lien-he" && element) {
+      // console.log("ewewe", element.offsetTop);
+      return window.scrollTo({
+        top: element.offsetTop - 100,
+        behavior: "smooth",
+      });
       // 👇 Will scroll smoothly to the top of the next section
-      return element.scrollIntoView({ behavior: "smooth" });
+      // return element.scrollIntoView({ behavior: "smooth" });
     }
     router.push("/");
     setTimeout(() => {
       const element = document.getElementById(elementId);
-      return element?.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo({
+        top: element!.offsetTop - 100,
+        behavior: "smooth",
+      });
+      // return element?.scrollIntoView({ behavior: "smooth" });
     }, 1000);
   };
   return (
