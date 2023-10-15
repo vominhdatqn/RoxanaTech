@@ -59,7 +59,7 @@ export default function Testimonial() {
               />
             </svg>
             <blockquote>
-              <p className="text-xl px-6 md:px-0 md:text-2xl font-medium text-gray-900 ">
+            <p className="text-lg px-6 md:px-0 md:text-xl font-normal text-gray-900 ">
                 "Thích bé sale của công ty nói chuyện vui vẻ và hỗ trợ nhiệt
                 tình. Web lên đẹp và load nhanh."
               </p>
@@ -90,7 +90,7 @@ export default function Testimonial() {
               />
             </svg>
             <blockquote>
-              <p className="text-xl px-6 md:px-0 md:text-2xl font-medium text-gray-900 ">
+            <p className="text-lg px-6 md:px-0 md:text-xl font-normal text-gray-900 ">
                 "App của RoxanaTech xài mượt nha. App đơn giản nhưng giao diện
                 đẹp nè. Hỗ trợ cũng nhiệt tình. Uy tín."
               </p>
