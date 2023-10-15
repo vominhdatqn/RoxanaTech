@@ -50,6 +50,12 @@ const itemsAll = [
     href: "https://mardoll-admin.vercel.app/auth/login",
     name: "contact-form",
   },
+  {
+    id: 9,
+    url: "/assets/images/product-demo-6.png",
+    href: "https://demo.themeies.com/elearning-react/",
+    name: "san-pham-demo-website-roxana-tech-education",
+  },
 ];
 
 export default function DemosSlug({ params }: { params: { slug: string } }) {
