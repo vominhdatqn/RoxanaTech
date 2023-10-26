@@ -17,6 +17,11 @@ export const indexQuery = groq`
   ${postFields}
 }`
 
+export const blogQuery = groq`
+*[_type == "post" && type == "Blog"] | order(_updatedAt desc) {
+  ${postFields}
+}`
+
 export const beautyQuery = groq`
 *[_type == "post" && type == "Beauty"] | order(_updatedAt desc) {
   ${postFields}

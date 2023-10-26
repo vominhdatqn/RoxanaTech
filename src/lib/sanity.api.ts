@@ -15,12 +15,12 @@ export const dataset = assertValue(
 
 export const projectId = assertValue(
     //   process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-    'zu22jc4f',
+    'fbzd8ba3',
     'Missing environment variable: NEXT_PUBLIC_SANITY_PROJECT_ID',
 )
 
 // export const readToken = process.env.SANITY_API_READ_TOKEN || ''
-export const readToken = 'skAOFXJl1emV2KRIcVRAVi7VtkmFL35ObBhgobNcxacuEuVJ81iyAY4F3w4ytRMQ6A41ZGVZNbqqgfcLSKnP3rgIFx2rz7fU1NnWkBhCVafGzigqA1HH9wzbbcEruI0V8xpVCqzHN3LT3OiXih9VZw966LfnJGUZzfBLT47HN9tF5sCPsaDd' || ''
+export const readToken = 'skR7mUD9KlgZDawfpQf8mQSKkARQVfhL6pgdo0G9vdeJtJyr56Jrl55rrrs0SHEB8pewkqeXNirSr4TXW7xBymDFyuPe9xn5r73cVekYZ8gnXxkEECzzI97hp9f67V1uFuQxQT5LmNP0IFz0jeCCfQgemC1sUy3dvqDEp5iqzieriUG5GH6V' || ''
 
 // see https://www.sanity.io/docs/api-versioning for how versioning works
 export const apiVersion = '2023-01-01'

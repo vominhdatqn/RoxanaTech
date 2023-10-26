@@ -10,7 +10,7 @@ import { apiVersion, dataset, projectId, useCdn } from './sanity.api'
 //   settingsQuery,
 // } from './sanity.queries'
 import { createClient, type SanityClient } from 'next-sanity'
-import { indexQuery, postBySlugQuery, postSlugsQuery, beautyQuery, weddingDressQuery, photographyQuery } from './sanity.queries'
+import { indexQuery, postBySlugQuery, postSlugsQuery, beautyQuery, weddingDressQuery, photographyQuery, blogQuery } from './sanity.queries'
 
 export function getClient(preview?: { token: string }): SanityClient {
 	const client = createClient({
@@ -49,6 +49,10 @@ export async function getAllPosts(): Promise<IPost[]> {
 export async function getAllBeautyPosts(): Promise<IPost[]> {
 	const client = getClient()
 	return (await client.fetch(beautyQuery)) || []
+}
+export async function getAllBlogPosts(): Promise<IPost[]> {
+	const client = getClient()
+	return (await client.fetch(blogQuery)) || []
 }
 
 export async function getAllWeddingDressPosts(): Promise<IPost[]> {

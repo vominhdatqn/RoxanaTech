@@ -64,6 +64,7 @@ const items: MenuItem[] = [
     </span>,
     "roxanatech-pricing-plan"
   ),
+  getItem("Blogs", "bai-viet"),
   getItem("Liên hệ", "lien-he"),
 ];
 

@@ -101,15 +101,14 @@ export default function Navbar() {
             >
               Bảng giá
             </span>
-            {/* <Link
-              className="underline-hover mr-5 uppercase"
-              // href="/bai-viet"
-              href="#"
-              aria-label="Stories & Tips"
+            <Link
+              className="underline-hover text-base font-semibold mr-5 uppercase"
+              href="/bai-viet"
+              aria-label="Blogs"
               rel="noopener noreferrer"
             >
-              Bảng giá
-            </Link> */}
+              Blogs
+            </Link>
             <Link
               className="underline-hover text-base font-semibold mr-5 uppercase"
               href="/lien-he"
