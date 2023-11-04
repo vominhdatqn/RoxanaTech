@@ -56,5 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.7,
     },
+    // blog
+    {
+      url: "https://roxanatech.com/bai-viet/react-native-la-gi-tai-sao-ban-nen-chon-su-dung-react-native",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.7,
+    },
   ];
 }
