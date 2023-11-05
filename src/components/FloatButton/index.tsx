@@ -6,6 +6,10 @@ import { BiArrowFromBottom, BiPhoneCall } from "react-icons/bi";
 
 export default function FloatButton() {
   const { isVisible, scrollToTop } = useScrollToTop();
+  const handleCallClick = () => {
+    const phoneNumber = "+84916254200";
+    window.location.href = `tel:${phoneNumber}`;
+  };
   return (
     <>
       {/* <div className="absolute w-[60px] h-[40px] bg-green-500" /> */}
@@ -33,7 +37,13 @@ export default function FloatButton() {
               className="text-primary hover:text-white"
             />
           </li> */}
-          <li className="hover:bg-[#2CBB00] p-1">
+          <li className="hover:bg-[#2CBB00] p-1" onClick={handleCallClick}>
+            <BiPhoneCall
+              size={30}
+              className="text-[#2CBB00] hover:text-white"
+            />
+          </li>
+          {/* <li className="hover:bg-[#2CBB00] p-1">
             <a
               href="tel:0916 254 200"
               aria-label="0916 254 200"
@@ -45,7 +55,7 @@ export default function FloatButton() {
                 className="text-[#2CBB00] hover:text-white"
               />
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </>
