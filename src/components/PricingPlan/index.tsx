@@ -37,7 +37,7 @@ export default function PricingPlan() {
           >
             <h3 className="text-2xl font-semibold">Web thông tin cơ bản</h3>
             <div className="flex justify-center items-baseline my-6">
-              <span className="mr-2 text-2xl font-extrabold">2.800.000</span>
+              <span className="mr-2 text-2xl font-extrabold">4.000.000</span>
               <span className="text-gray-500">vnđ</span>
             </div>
 
@@ -246,7 +246,7 @@ export default function PricingPlan() {
           >
             <h3 className="text-2xl font-semibold">Web bán hàng cơ bản</h3>
             <div className="flex justify-center items-baseline my-6">
-              <span className="mr-2 text-2xl font-extrabold">5.000.000</span>
+              <span className="mr-2 text-2xl font-extrabold">7.000.000</span>
               <span className="text-gray-500">vnđ</span>
             </div>
 
@@ -497,7 +497,7 @@ export default function PricingPlan() {
           >
             <h3 className="text-2xl font-semibold">App bán hàng cơ bản</h3>
             <div className="flex justify-center items-baseline my-6">
-              <span className="mr-2 text-2xl font-extrabold">8.000.000</span>
+              <span className="mr-2 text-2xl font-extrabold">10.000.000</span>
               <span className="text-gray-500">vnđ</span>
             </div>
 
