@@ -14,7 +14,7 @@ export default function PricingPlan() {
             <span className="bg-gradient-to-r from-primary to-green-700 inline-block text-transparent bg-clip-text">
               RoxanaTech
             </span>{" "}
-            2023
+            2024
           </h2>
           <p
             data-aos="fade-up"
@@ -37,7 +37,7 @@ export default function PricingPlan() {
           >
             <h3 className="text-2xl font-semibold">Web thông tin cơ bản</h3>
             <div className="flex justify-center items-baseline my-6">
-              <span className="mr-2 text-2xl font-extrabold">4.000.000</span>
+              <span className="mr-2 text-2xl font-extrabold">5.000.000</span>
               <span className="text-gray-500">vnđ</span>
             </div>
 
