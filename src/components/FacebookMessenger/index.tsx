@@ -16,7 +16,7 @@ export default function FacebookMessenger() {
 
   return (
     <FacebookProvider appId="2317382268469700" chatSupport>
-      <CustomChat pageId="1870324903280300" minimized={false} />
+      <CustomChat pageId="1870324903280300" minimized={true} />
     </FacebookProvider>
   );
 }
