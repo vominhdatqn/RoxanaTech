@@ -70,10 +70,6 @@ export default function Products(props) {
             autoplay={{ delay: 4000 }}
             modules={[Autoplay, Navigation, Pagination]}
             pagination={{ clickable: true, el: ".spb4" }}
-            navigation={{
-              prevEl: ".snbp4",
-              nextEl: ".snbn4",
-            }}
           >
             {products21.map((elm, i) => (
               <SwiperSlide key={i}>
@@ -120,10 +116,7 @@ export default function Products(props) {
             autoplay={{ delay: 4000 }}
             modules={[Autoplay, Navigation, Pagination]}
             pagination={{ clickable: true, el: ".sp1" }}
-            navigation={{
-              prevEl: ".snbp225",
-              nextEl: ".snbp225",
-            }}
+          
           >
             {products211.map((elm, i) => (
               <SwiperSlide key={i}>
