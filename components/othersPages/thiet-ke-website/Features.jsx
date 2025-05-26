@@ -25,7 +25,7 @@ export default function Features() {
         </div>
         <div className="row text-center">
           {slidesData3.map((slide, index) => (
-            <div key={index} className="col-lg-3 col-md-4 col-6 mb-4">
+            <div key={index} className="col-lg-3 col-md-4 col-12 mb-4">
               <div className="banner-gr-item text-center type-2 radius-20">
                 <div className="img-wrapper">
                   <img

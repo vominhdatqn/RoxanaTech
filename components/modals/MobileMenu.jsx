@@ -46,120 +46,54 @@ export default function MobileMenu() {
             {navItems.map((item, i) => (
               <li key={i} className="nav-mb-item">
                 <a
-                  href={`#${item.id}`}
+                  href={`${item.href}`}
                   className={`collapsed mb-menu-link current ${
                     isMenuActive(item) ? "activeMenu" : ""
                   }`}
-                  data-bs-toggle="collapse"
                   aria-expanded="true"
                   aria-controls={item.id}
                 >
                   <span>{item.label}</span>
-                  <span className="btn-open-sub" />
                 </a>
-                <div id={item.id} className="collapse">
-                  <ul className="sub-nav-menu">
-                    {item.links.map((subItem, i2) => (
-                      <li key={i2}>
-                        {subItem.links ? (
-                          <>
-                            <a
-                              href={`#${subItem.id}`}
-                              className={`sub-nav-link collapsed  ${
-                                isMenuActive(subItem) ? "activeMenu" : ""
-                              }`}
-                              data-bs-toggle="collapse"
-                              aria-expanded="true"
-                              aria-controls={subItem.id}
-                            >
-                              <span>{subItem.label}</span>
-                              <span className="btn-open-sub" />
-                            </a>
-                            <div id={subItem.id} className="collapse">
-                              <ul className="sub-nav-menu sub-menu-level-2">
-                                {subItem.links.map((innerItem, i3) => (
-                                  <li key={i3}>
-                                    <Link
-                                      href={innerItem.href}
-                                      className={`sub-nav-link  ${
-                                        isMenuActive(innerItem)
-                                          ? "activeMenu"
-                                          : ""
-                                      }`}
-                                    >
-                                      {innerItem.label}
-                                      {innerItem.demoLabel && (
-                                        <div className="demo-label">
-                                          <span className="demo-new">New</span>
-                                        </div>
-                                      )}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </>
-                        ) : (
-                          <Link
-                            href={subItem.href}
-                            className={`sub-nav-link ${
-                              isMenuActive(subItem) ? "activeMenu" : ""
-                            }`}
-                          >
-                            {subItem.label}
-                            {subItem.demoLabel && (
-                              <div className="demo-label">
-                                <span className="demo-new">New</span>
-                              </div>
-                            )}
-                          </Link>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </li>
             ))}
             <li className="nav-mb-item">
-              <a
-                href="https://themeforest.net/item/ecomus-ultimate-html5-template/53417990?s_rank=3"
-                className="mb-menu-link"
-              >
-                Buy now
-              </a>
+                Liên Hệ
             </li>
           </ul>
           <div className="mb-other-content">
-            <div className="d-flex group-icon">
-              <Link href={`/wishlist`} className="site-nav-icon">
-                <i className="icon icon-heart" />
-                Wishlist
-              </Link>
-              <Link href={`/home-search`} className="site-nav-icon">
-                <i className="icon icon-search" />
-                Search
-              </Link>
-            </div>
-            <div className="mb-notice">
-              <Link href={`/contact-1`} className="text-need">
-                Need help ?
-              </Link>
-            </div>
             <ul className="mb-info">
               <li>
-                Address: 1234 Fashion Street, Suite 567, <br />
-                New York, NY 10001
+                Địa chỉ: 87 Dương Khuê, Tân Hiệp, <br />
+                Tân Phú, Tp.Hồ Chí Minh
               </li>
               <li>
-                Email: <b>info@fashionshop.com</b>
+                Email: <b>roxanatechcompany@gmail.com</b>
               </li>
               <li>
-                Phone: <b>(212) 555-1234</b>
+                Hotline:{" "}
+                <a
+                  rel="nofollow noreferrer"
+                  className="text_primary"
+                  href="tel:0329181288"
+                  aria-label="0329181288"
+                >
+                  0329 181 288
+                </a>{" "}
+                -{" "}
+                <a
+                  rel="nofollow noreferrer"
+                  className="text_primary"
+                  href="tel:0329181288"
+                  aria-label="0921107445"
+                >
+                  0921 107 445
+                </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="mb-bottom">
+        {/* <div className="mb-bottom">
           <Link href={`/login`} className="site-nav-icon">
             <i className="icon icon-account" />
             Login
@@ -176,7 +110,7 @@ export default function MobileMenu() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
