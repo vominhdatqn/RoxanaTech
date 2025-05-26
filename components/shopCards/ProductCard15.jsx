@@ -112,14 +112,14 @@ export default function ProductCard15({ product }) {
         <ul>
           {slide.features.map((feature, featureIndex) => (
             <li key={featureIndex} className="fw-5 fs-16">
-              <i className="icon icon-check text-success" />
-              {feature}
+              {feature?.checked ? <i className="icon icon-check text-success" /> : <i className="icon icon-close text-danger" />}
+                {feature.title}
             </li>
           ))}
         </ul>
         <div className="tf-price-table-btn text-center">
           <Link
-            href={`/product-detail/${product.id}`}
+            href="tel:+329181288"
             className={"tf-btn btn-md radius-3 fw-7 btn-icon animate-hover-btn bg_white"}
           // className={` ${product.populer
           //   ? "tf-btn btn-md radius-3 fw-7 btn-icon animate-hover-btn bg_white"

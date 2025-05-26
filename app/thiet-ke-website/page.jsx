@@ -1,17 +1,16 @@
+import { BreadCrumb } from "@/components/common/BreadCrumb";
 import Footer1 from "@/components/footers/Footer1";
-import { AuroraHero } from "@/components/homes/home/AuroraHero";
 import Header2 from "@/components/headers/Header2";
-import Products from "@/components/homes/home-baby/Products";
-import Marquee from "@/components/homes/home-electronic/Marquee";
-import Categories from "@/components/homes/home-grocery/Categories";
 import Topbar from "@/components/homes/home-headphone/Topbar";
-import Testimonials from "@/components/homes/home-gaming-accessories/Testimonials";
 import Products2 from "@/components/homes/home-paddle-boards/Products";
+import { AuroraHero } from "@/components/homes/home/AuroraHero";
+import About from "@/components/othersPages/thiet-ke-website/About";
+import Features from "@/components/othersPages/thiet-ke-website/Features";
 
 export const metadata = {
-  title: "RoxanaTech - Thiết kế website/app chuyên nghiệp cho doanh nghiệp",
+  title: "Thiết kế website",
   description:
-    "Thiết kế website/app cho doanh nghiệp, uy tín, chuẩn UX,UI✅ website/app doanh nghiệp chuẩn SEO ✅ tại TPHCM và các tỉnh miền Tây nam bộ. Dịch vụ uy tín, hỗ trợ kỹ thuật 24/7, tư vấn miễn phí theo yêu cầu chỉ từ 2tr8 ✅ tặng hosting tên miền tốc độ cao. Miễn phí dùng thử ✅, thiết kế chọn gói website/app tại RoxanaTech.",
+    "Cung cấp giải pháp thiết kế website hiện đại, chuẩn SEO và thân thiện với mọi thiết bị.",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -86,19 +85,23 @@ export const metadata = {
     type: "website",
   },
 };
-
-export default function Home() {
+export default function page() {
   return (
     <>
       <Topbar />
       <Header2 />
-      <AuroraHero />
-      <Marquee />
-      <Categories />
-      {/* <Features /> */}
-      <Products2 />
-      <Products />
-      <Testimonials />
+      {/* <Hero /> */}
+      <AuroraHero
+        title="THIẾT KẾ WEBSITE"
+        content="Chúng tôi mang đến giải pháp thiết kế website chuẩn SEO, nâng cao trải nghiệm người dùng và tối ưu hiệu quả bán hàng đa kênh."
+        subContent="Hãy để Web Roxanatech “Đổi mới công nghệ – Tối ưu hiệu quả”, giúp doanh nghiệp của bạn bứt phá và phát triển bền vững!"
+      />
+      <BreadCrumb pageName="Thiết kế website" />
+      {/* <FlatTitle /> */}
+      <About />
+      {/* <OrderDetails /> */}
+      <Features />
+      <Products2 subTitle="Chúng tôi mang đến một website không chỉ đẹp mắt mà còn dễ dàng sử dụng, giúp khách hàng mua sắm thuận tiện và nhanh chóng. Với sự minh bạch trong giá cả, bạn sẽ luôn cảm thấy yên tâm và tin tưởng khi đồng hành cùng chúng tôi!" />
       <Footer1 />
     </>
   );

@@ -2,8 +2,6 @@ import React from "react";
 import Nav from "./Nav";
 import Image from "next/image";
 import Link from "next/link";
-import CartLength from "../common/CartLength";
-import WishlistLength from "../common/WishlistLength";
 export default function Header2({
   textClass,
   bgColor = "",

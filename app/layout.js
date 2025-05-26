@@ -12,7 +12,7 @@ import ProductSidebar from "@/components/modals/ProductSidebar";
 import QuickAdd from "@/components/modals/QuickAdd";
 import Compare from "@/components/modals/Compare";
 import ShopCart from "@/components/modals/ShopCart";
-import AskQuestion from "@/components/modals/AskQuestion";
+// import AskQuestion from "@/components/modals/AskQuestion";
 import BlogSidebar from "@/components/modals/BlogSidebar";
 import ColorCompare from "@/components/modals/ColorCompare";
 import DeliveryReturn from "@/components/modals/DeliveryReturn";
@@ -26,17 +26,18 @@ import ToolbarBottom from "@/components/modals/ToolbarBottom";
 import ToolbarShop from "@/components/modals/ToolbarShop";
 
 import { usePathname } from "next/navigation";
-import NewsletterModal from "@/components/modals/NewsletterModal";
-import ShareModal from "@/components/modals/ShareModal";
+// import ShareModal from "@/components/modals/ShareModal";
 import ScrollTop from "@/components/common/ScrollTop";
-import RtlToggle from "@/components/common/RtlToggle";
 import ReactQueryProvider from "@/context/ReactQueryProvider";
 import { ToastContainer } from "react-toastify";
 import FloatPhoneCall from "@/components/common/FloatPhoneCall";
 import FloatZaloCall from "@/components/common/FloatZaloCall";
 import dynamic from "next/dynamic";
-const FacebookMessenger = dynamic(
-  () => import("@/components/common/FacebookMessenger"),
+
+
+// import AskQuestion from "@/components/modals/AskQuestion";
+const AskQuestion = dynamic(
+  () => import("@/components/modals/AskQuestion"),
   {
     ssr: false,
   }
@@ -44,14 +45,6 @@ const FacebookMessenger = dynamic(
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Import the script only on the client side
-      import("bootstrap/dist/js/bootstrap.esm").then(() => {
-        // Module is imported, you can access any exported functionality if
-      });
-    }
-  }, []);
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector("header");
@@ -166,7 +159,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <meta property="fb:app_id" content="2317382268469700" />
         <script
           className="rank-math-schema"
@@ -277,7 +270,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-      </head>
+      </head> */}
       <body className="preload-wrapper">
         <div className="preload preload-container" id="preloader">
           <div className="preload-logo">
@@ -308,12 +301,12 @@ export default function RootLayout({ children }) {
             <ToolbarShop />
             <ToastContainer />
             {/* <NewsletterModal /> */}
-            <ShareModal />{" "}
+            {/* <ShareModal />{" "} */}
           </Context>
           <ScrollTop />
           <FloatPhoneCall />
           <FloatZaloCall />
-          <FacebookMessenger />
+          {/* <FacebookMessenger /> */}
         </ReactQueryProvider>
       </body>
     </html>
